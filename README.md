@@ -1,2 +1,7 @@
 # ml4963.github.io
-My website!
+
+To do list:
+    - simplify code for header
+    - project section
+    - graphics section
+    - credits section
