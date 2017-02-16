@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>michelle's recipes</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+   integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+     <style>
+    * {
+        font-family: arial;
+
+     }
+
+    body {
+        margin: 0px;
+     }
+
+
+
+    @font-face {
+        font-family: Amontillados;
+        src: url('bromello.otf');
+    }
+    .container {
+        width: 50%;
+        height: auto;
+        margin: 0px auto;
+        padding-bottom: 10px;
+        padding-top: 10px;
+    }
+
+    figure {
+        margin: 0px;
+        width: 100%;
+        height: auto;
+    }
+    figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        width: 100%;
+        display: block;
+        height: auto;
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .info #content, .info #last-content {
+        width: 30%;
+        height: 100%;
+        font: 15px arial;
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #EBA29E;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        text-align: center;
+        float: left;
+
+    }
+
+    .clear {
+        clear: left;
+    }
+
+    .info #content {
+        margin-right: 5%;
+    }
+
+    .difficult {
+        color: #2d1d1c;
+    }
+
+    .side {
+        float: left;
+        display: block;
+        background-color: #D3E5DF;
+        height: 100%;
+        width: 30%;
+
+        margin-top: 1em;
+        padding: 3%;
+
+    }
+
+    .side-content {
+        width: 100%;
+    }
+
+    .content-container {
+        overflow: hidden;
+        width: 100%;
+    }
+
+    .container h1 {
+        text-align: center;
+    }
+
+    li {
+        margin: 0px;
+    }
+    ul li {
+        margin-left: -30px;
+        left: 0px;
+    }
+
+    .steps {
+        margin-top: 20px;
+        display: block;
+        float: right;
+        width: 60%;
+        clear: right;
+    }
+
+    h2 {
+        font-family: Amontillados, Arial;
+        color: #5b5b59;
+        text-align: center;
+    }
+
+    h1 {
+        font-family: Amontillados, Arial;
+        color: #5b5b59;
+    }
+
+    footer {
+        width: 100%;
+        height: 50px;
+        background-color: #5b5b59;
+        left: 0px;
+        bottom: 0px;
+        text-align: center;
+        padding-top: 10px;
+        line-height: 40px;
+        color: #e7e7e2;
+    }
+
+    /* nav bar stuff */
+
+    header {
+        top: 0px;
+        background-color: #e3d3d6;
+        height: 50px;
+    }
+
+    header h1 {
+        float: left;
+        margin-top: 0;
+        padding: none;
+        top: none;
+        margin-left: 20px;
+    }
+
+    nav {
+        float: right;
+    }
+    nav ul {
+        margin-top: 0px;
+        list-style-type: none;
+        overflow: hidden;
+    }
+
+    nav ul li {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    nav li a {
+      background-color: #e3d3d6;
+      color: #323232;
+      width: 100px;
+      height: 30px;
+      display: block;
+      text-align: center;
+      padding: 10px;
+      line-height: 30px;
+      text-decoration: none;
+    }
+
+    .dropdown {
+        display: inline-block;
+    }
+
+    .dropdown-stuff {
+        display: none;
+        position: absolute;
+    }
+
+    .dropdown:hover .dropdown-stuff{
+        display: block; 
+    }
+
+
+    nav li a:hover{
+      background-color: white;
+      color: black;
+    }
+    nav li a.active{
+      background-color: #888;
+    }
+
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    </style>
+
+</head>
+<body>
+        <header>
+            <h1>Michelle's Recipes</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li class = "dropdown">
+                        <a class = "navbar" href= "#"> recipes </a>
+                        <div class = "dropdown-stuff">
+                            <a href = "#macaroons">macaroons</a>
+                            <a href = "#french-toast">french toast</a>
+                        </div>
+                    </li>
+                    <li><a href="#">about us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="container" id = "macaroons">
+
+            <h1>macaroons</h1>
+            <figure>
+                <img src = "http://images.media-allrecipes.com/images/62836.jpg">
+            </figure>
+
+            <div class = "info">
+                <div id = "content"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                    <a href = "https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=google+timer+for+2+hours+10+minutes"> 2 hr 10 min</a>
+                    </div>
+                <div id = "content">
+                    Level:
+                    <i class="difficult fa fa-frown-o" aria-hidden="true"></i>
+                    <i class="difficult fa fa-frown-o" aria-hidden="true"></i>
+                    <i class="fa fa-frown-o" aria-hidden="true"></i>
+                </div>
+                <div id = "last-content">
+                    <i class="fa fa-cutlery" aria-hidden="true"></i>
+                    36 Servings
+                </div>
+            </div>
+
+            
+            <div class = "content-container">
+                <div class = "side">
+                    <h2>Ingredients</h2>
+                    <ul>
+                        <li>1 3/4 cups confectioners' sugar</li>
+                        <li>1 cup almond flour</li>
+                        <li>3 large egg whites</li>
+                        <li>1/4 teaspoon cream of tartar</li>
+                        <li>Pinch of salt</li>
+                        <li>1/4 cup superfine sugar</li>
+                        <li>2 to 3 drops gel food coloring</li>
+                        <li>1/2 teaspoon vanilla, almond or mint extract</li>
+                        <li>Assorted fillings</li>
+                    </ul>
+                </div>
+
+                <div class = "steps">
+                    <h2>Steps</h2>
+                    <ol>
+                        <li> Preheat the oven to 300 degrees F using the convection setting. Line 3 baking sheets with silicone mats. Measure the confectioners' sugar and almond flour by spooning them into measuring cups and leveling with a knife. Transfer to a bowl; whisk to combine. </li>
+
+                        <li>Sift the sugar-almond flour mixture, a little at a time, through a fine-mesh sieve into a large bowl, pressing with a rubber spatula to pass through as much as possible. It will take a while, and up to 2 tablespoons of coarse almond flour may be left; just toss it.</li>
+
+                        <li>Beat the egg whites, cream of tartar and salt with a mixer on medium speed until frothy. Increase the speed to medium high; gradually add the superfine sugar and beat until stiff and shiny, about 5 more minutes.</li>
+
+                        <li>Transfer the beaten egg whites to the bowl with the almond flour mixture. Draw a rubber spatula halfway through the mixture and fold until incorporated, giving the bowl a quarter turn with each fold.</li>
+
+                        <li>Add the food coloring and extract (see below). Continue folding and turning, scraping down the bowl, until the batter is smooth and falls off the spatula in a thin flat ribbon, 2 to 3 minutes.</li>
+
+                        <li>Transfer the batter to a pastry bag fitted with a 1/4-inch round tip. Holding the bag vertically and close to the baking sheet, pipe 1 1/4-inch circles (24 per sheet). Firmly tap the baking sheets twice against the counter to release any air bubbles.</li>
+
+                        <li>Let the cookies sit at room temperature until the tops are no longer sticky to the touch, 15 minutes to 1 hour, depending on the humidity. Slip another baking sheet under the first batch (a double baking sheet protects the cookies from the heat).</li>
+
+                        <li>Bake the first batch until the cookies are shiny and rise 1/8 inch to form a "foot," about 20 minutes. Transfer to a rack to cool completely. Repeat, using a double sheet for each batch. Peel the cookies off the mats and sandwich with a thin layer of filling.</li>
+                    </ol>
+                </div>
+            </div>
+            <hr>
+
+            <div class = "content-container" id = "french-toast">
+                <h1>french toast</h1>
+                <figure>
+                    <img src = "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/3/26/0/IE0309_French-Toast.jpg.rend.hgtvcom.616.462.jpeg">
+                </figure>
+
+                <div class = "info">
+                    <div id = "content"><i class="fa fa-clock-o" aria-hidden="true"></i>
+                        <a href = "https://www.google.com/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=google+timer+for+30+minutes"> 30 min</a>
+                        </div>
+                    <div id = "content">
+                        Level:
+                        <i class="difficult fa fa-frown-o" aria-hidden="true"></i>
+                        <i class="fa fa-frown-o" aria-hidden="true"></i>
+                        <i class="fa fa-frown-o" aria-hidden="true"></i>
+                    </div>
+                    <div id = "last-content">
+                        <i class="fa fa-cutlery" aria-hidden="true"></i>
+                        4 Servings
+                    </div>
+                </div>
+
+                
+                <div class = "content-container">
+                    <div class = "side">
+                        <h2>Ingredients</h2>
+                        <ul>
+                            <li>1 teaspoon ground cinnamon</li>
+                            <li>1/4 teaspoon ground nutmeg</li>
+                            <li>2 tablespoons sugar</li>
+                            <li>4 tablespoons butter</li>
+                            <li>4 eggs</li>
+                            <li>1/4 cup milk</li>
+                            <li>1/2 teaspoon vanilla extract</li>
+                            <li>8 slices challah, brioche, or white bread</li>
+                            <li>1/2 cup maple syrup, warmed</li>
+                        </ul>
+                    </div>
+
+                    <div class = "steps">
+                        <h2>Steps</h2>
+                        <ol>
+                            <li> In a small bowl, combine, cinnamon, nutmeg, and sugar and set aside briefly.</li>
+
+                            <li>In a 10-inch or 12-inch skillet, melt butter over medium heat. Whisk together cinnamon mixture, eggs, milk, and vanilla and pour into a shallow container such as a pie plate. Dip bread in egg mixture. Fry slices until golden brown, then flip to cook the other side. Serve with syrup.</li>
+                        </ol>
+                    </div>
+                </div>
+        </div>
+
+        
+            
+        </div>
+
+        <footer>
+            made with <i class="fa fa-heart" aria-hidden="true" style = "color:#ff4040;"></i>
+        </footer>
+        
+
+</body>
