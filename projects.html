@@ -2,118 +2,147 @@
 <html lang="en">
 
 <head>
-    <title>mochadroppe - michelle lam - portfolio</title>
+    <title>michelle lam - portfolio</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
+
 </head>
+
+
+
 
 <body>
 
-<div class="page-header">
-  <div class="container">
-    <div class="row">
-        <div class="col-lg-6">
-            <img class="img-responsive" src="img/Penguin.png" style="width:100%;height:100%;">
-        </div>
-        <div class="col-lg-6">
-          <br><br>
-            <img class="img-responsive" src="img/title.png" style="width:100%;height:100%;">
-            <br>
+  <header>
+    <h1>Michelle Lam</h1>
 
-            <!--- navigating! -->
-            <center>
+    <!-- navigation -->
 
-
-          <div id ="menu-outer">
-          <div class="table">
-
-            <div class="dropdown">
-               <button onclick="location.href='index.html'" class="dropbtn">HOME</button>
-            </div>
-
-            <div class="dropdown">
-              <button class="dropbtn">WORK</button>
-                <div class="dropdown-content">
-                  <a href="projects.html">projects</a>
-                  <a href="graphics.html">graphics</a>
-                </div>
-            </div>
-
-            <div class="dropdown">
-               <button onclick="location.href='index.html'" class="dropbtn">CREDIT</button>
-            </div>
-
-
-        <br><br>
-
-        <!--necessary links!-->
-
-          <table cellspacing="1">
-            <tr>
-              
-              <td>
-                    <a href="mailto:ml4963@nyu.edu">
-                    <img id ="icon" class="img-responsive" src="img/email.svg" style="width:20px;height:20px;">
-                    </a>
-              </td>
-              
-              <td>
-                    <a href="https://github.com/ml4963">
-                    <img class="img-responsive" src="img/github.svg" style="width:20px;height:20px;">
-                    </a>
-              </td>
-              
-              <td>
-                  <a href="https://www.linkedin.com/in/ml4963">
-                  <img class="img-responsive" src="img/linkedin.svg" style="width:20px;height:20px">
-                  </a>
-              </td>
-
-              <td>
-                <a href="/document/Michelle_Lam_Resume.pdf">
-                <img class="img-responsive" src="img/application.svg" style="width:20px;height:20px">
-                </a>
-              </td>
-
-            </tr>
-          </table>
-
-
-        </center>
-
+    <nav id = "nav-main">
+      <ul>
+        <li><a href="projects.html">projects</a></li>
+        <li><a href="experience.html">experience</a></li>
+        <li class = "lst-element"><a href="contact.html">contact</a></li>
+      </ul>
+    </nav> 
     
+    <!--
+    <div id="nav-trigger">
+      <span>Menu</span>
+    </div>
+    -->
+    <nav id = "nav-mobile">
+    </nav>
+    
+  </header>
 
-</div>
-</div>
+  <h2>Programming</h2>
 
+  <div class = "row">
 
+    <div class = "proj">
+      <a href = "#proj1">
+        <div class = "proj-img">
+          <img src = "https://github.com/ml4963/Alertify/blob/master/image/Final%20Mockups/logo.png?raw=true">
         </div>
+      </a>
+      <div class = "proj-label">
+        NAME HERE
+      </div>
     </div>
+
+    <!-- project 1 info -->
+    <div id="proj1" class="modalDialog">
+
+      <div>
+        <div id = "proj-close">
+          <a href="#close" title="Close" class="close">X</a>
+        </div>  
+        <div id = "proj-content">
+          <div class = "image">
+            <img src = "https://github.com/ml4963/Alertify/blob/master/image/Final%20Mockups/logo.png?raw=true">
+          </div>
+          <div class = "descript">
+            <h1>Alertify</h1>
+            <h2></h2>
+            <p>
+              Alertify is a mobile app designed to get you the help you're familiar with
+              wherever you are and whenever you are.
+            </p>
+            <p>
+              I helped create and design the logo in Photoshop. As for the actual application, I helped
+              code the application in Python using the Kivy framework.
+            </p>
+            <p>
+              With a team of two others, I helped prepare, develop, and pitch a business model and go-to market strategy to a group of professional business and tech leaders.</p>
+            <p>
+              As a result, our team placed third in a presentation competition for a product that is meant to empower and build local/global communities.
+            </p>
+
+            
+            <hr>
+              <span>
+                Python
+                Photoshop
+                Kivy
+              </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <div class = "proj">
+      <div class = "proj-img">
+      </div>
+      <div class = "proj-label">
+        NAME HERE
+      </div>
+    </div>
+
+    <div class = "proj-lst">
+      <div class = "proj-img">
+      </div>
+      <div class = "proj-label">
+        NAME HERE
+      </div>
     </div>
   </div>
-</div>
 
+  <div class = "row">
 
+    <div class = "proj">
+      <a href = "#">
+        <div class = "proj-img"></div>
+      </a>
+      <div class = "proj-label">
+        NAME HERE
+      </div>
+    </div>
+    
+    <div class = "proj">
+      <div class = "proj-img">
+      </div>
+      <div class = "proj-label">
+        NAME HERE
+      </div>
+    </div>
 
- <div id="site">
-  <div class="container">
+    <div class = "proj-lst">
+      <div class = "proj-img">
+      </div>
+      <div class = "proj-label">
+        NAME HERE
+      </div>
+    </div>
+  
 
-  <h1>Work - Projects</h1>
-
-  <center>
-  <div class="content">
-
-  <h2>Project Name Here</h2>
-  UNDER CONSTRUCTION
- 
   </div>
-  </center>
 
-  </div>
-</div>
+  <h2>Graphic Art</h2>
 
 </body>
