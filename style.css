@@ -112,10 +112,11 @@ nav li a:hover{
   margin-right: auto;
   background-color:#C0C0C0;
   color: #000;
-  width: 200px;
+  width: 10em;
   padding: 0.25em;
   position: relative;
   margin-top: -0.90em;
+  display: block;
 }
 
 .proj-lst {
