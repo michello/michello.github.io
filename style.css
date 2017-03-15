@@ -224,6 +224,10 @@ div > .descript {
   /* height: auto; */
   }
 
+  .proj-label {
+    width: 30%;
+  }
+
 
 }
 
