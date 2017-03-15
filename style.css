@@ -8,11 +8,15 @@ body {
   margin: 3.5em;
 }
 
+@font-face {
+  font-family: GlossBloom;
+  src: url('Hashtag.ttf');
+}
+
 h1 {
   font-size: 1em;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin-bottom: 2em;
 }
 
 h1 a {
@@ -21,11 +25,18 @@ h1 a {
 }
 
 h2 {
-  font-size: 0.9em;
+  font-family: GlossBloom;
+  font-size: 1.5em;
   letter-spacing: 0.20em;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 1.75em;
+}
+
+h3 {
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 
@@ -61,11 +72,13 @@ nav ul li {
   margin-right: 2em;
 }
 
+nav ul li:last-child {
+  margin-right: 0em;
+}
 
 
 nav li a {
   font-size: 0.75em;
-  background-color: none;
   color: #000;
   width: auto;
   height: auto;
@@ -96,7 +109,6 @@ nav li a:hover{
 .proj, .proj-lst {
   text-align: center;
   height: 300px;
-  background-color: none;
   display: inline-block;
   width: 25%;
   margin-right: 2em;
@@ -105,7 +117,6 @@ nav li a:hover{
 }
 
 .proj-img {
-  background-color: red;
   height: 80%;
   width: 100%;
   overflow: hidden;
@@ -113,12 +124,14 @@ nav li a:hover{
 
 
 .proj-label {
+  text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
-  background-color:#C0C0C0;
-  color: #000;
+  background-color:#e0e0e1;
+  letter-spacing: 0.1em;
+  color: #131313;
   width: 10em;
-  padding: 0.25em;
+  padding: 0.5em;
   position: relative;
   margin-top: -0.90em;
   display: block;
@@ -151,14 +164,15 @@ nav li a:hover{
 }
 
 .modalDialog > div {
-  margin-top: 5%;
+  display: block;
+  margin-top: 2%;
   width: 50%;
-  height: 70%;
   position: relative;
   margin-left: auto;
   margin-right: auto;
-  padding: 2em;
+  padding: 1em;
   background: #fff;
+  overflow:auto;
  
 }
 
@@ -166,16 +180,14 @@ div > .image {
   width: 30%;
   height: auto;
   float: left;
-  margin-left: 5%;
 }
 
 div > .descript {
   text-align: left;
   width: 50%;
-  height: 350px;
   float: right;
-  overflow: auto;
   font-size: 0.75em;
+  margin-right: 5%;
 }
 
 #proj-close {
@@ -183,7 +195,8 @@ div > .descript {
   margin-right: 0em;
 }
 .close {
-  right: 3em;
+  top: 1em;
+  right: 2.5%;
   color: #000;
   line-height: 15px;
   position: absolute;
@@ -193,10 +206,33 @@ div > .descript {
 }
 
 #proj-content {
-  margin-top: 3em;
-  display: auto;
+  margin-top: 1em;
+  margin-bottom: 2em;
 }
 
+span.tag {
+  background-color: #4c4c4c;
+  padding: 1%;
+  color: #e5e5e5;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.1em;
+  display: inline-block;
+}
+
+#tags {
+  text-align: left;
+}
+
+a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
+  margin-right: 0em;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
 
 
 
