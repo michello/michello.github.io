@@ -2,10 +2,24 @@
 <html lang="en">
 
 <head>
-    <title>michelle lam - portfolio</title>
+    <title>michelle</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src ="js/script.js"></script>
+    <script src ="js/typed.js"></script>
+    <script>
+      $(function(){
+        $(".message").typed({
+          strings: ["like to program.", "am part of Tech@NYU's infrastructure team.", "am a hackathon enthusiast.", "live, breathe and drink coffee.", "helped organized a hackathon called Social Hacks!"],
+          typeSpeed: 40,
+          shuffle: true,
+          loop: true,
+          contentType: 'text'
+        });
+      });
+    </script>
 
 </head>
 
@@ -19,28 +33,26 @@
 
     <!-- navigation -->
 
-    <nav id = "nav-main">
-      <ul>
+    <nav class = "nav-main">
+      <ul class = "active">
         <li><a href="projects.html">projects</a></li>
-        <li><a href="experience.html">experience</a></li>
+        <li><a href ="document/Michelle_Lam_Resume.pdf">resume</a></li>
         <li><a href="contact.html">contact</a></li>
       </ul>
-    </nav> 
-    
-    <div id="nav-trigger">
-      <span>Menu</span>
-    </div>
-    
-    <nav id = "nav-mobile">
+      <a class = "toggle-nav" href = "#">&#9776;</a>
     </nav>
-
+    
   </header>
 
   <div id = "content">
     <div id = "mainImage">
+      <img src = "https://www.wpfreeware.com/wp-content/uploads/2014/09/placeholder-images.jpg">
     </div>
     <div id = "side">
-      Yo! My name is Michelle. 
+      <p>Hi there! My name is Michelle. And I'm an aspiring web developer.</p>
+      <p>
+        A NYU sophomore majoring in computer science, I <span class="message"></span>
+      </p>
     </div>
   </div>
 

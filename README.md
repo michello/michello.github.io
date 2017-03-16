@@ -2,3 +2,4 @@
 
 ## credits
 - Gloss and Bloom font
+- Typing effect by Matt Boldt (www.mattboldt.com)

@@ -93,12 +93,51 @@ nav li a:hover{
   border-bottom: 2px solid #000;
 }
 
-
-#nav-trigger {
+.toggle-nav {
   display: none;
-/*  text-align: center; */
 }
 
+/* animated text stuff */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* homepage stuff */
+
+#mainImage img {
+  width: 40%;
+  margin-right: 10%;
+  height: auto;
+  float: left;
+}
+
+#side {
+  width: 50%;
+  font-size: 2em;
+  float: right;
+}
+
+
+/* proj section stuff */
 .row {
   text-align: center;
   display: block;
@@ -241,20 +280,71 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
 
   /* navbar */
   header h1 {
+    width: 50%;
+    float: left;
+    display: block;
+  }
+
+  .nav-main {
+    position: relative;
+    display: inline-block;
+  }
+
+  .nav-main ul.active {
+    display: none;
+  }
+
+  .nav-main ul {
+    width: 100%;
+    position: absolute;
+    top: 120px;
+    left: 0px;
+    padding: 10px 18px;
+    border-radius: 3px;
+    background: #303030;
+  }
+
+  .nav-main ul:after {
+    width: 0px;
+    height:0px;
+    position:absolute;
+    top: 0%;
+    left: 22px;
+    content: '';
+    transform: translate(0%, -100%);
+    border-bottom:7px solid #303030;
+  }
+
+  .nav-main li {
+    margin: 5px 0px 5px 0px;
     float: none;
     display: block;
   }
-  nav {
-    margin: none;
+
+  .nav-main a {
+    color: #000;
+    text-decoration: none;
+    display: block;
+  }
+
+  .toggle-nav {
+    padding: 20px;
+    float: left;
+    display: inline-block;
+  }
+
+  .toggle-nab:hover, .toggle-nav.active {
+    text-decoration:none;
+    color: #000;
+  }
+
+  /* homepage stuff */
+  #mainImage img, #side {
+    width: 100%;
     float: none;
   }
 
-  nav ul li a {
-    padding: 0.75em;
-    color: purple;
-    display: block;
-    width: 100%;
-  }
+
 
   /* project section */
 
@@ -262,7 +352,6 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
     display: block;
     width: 100%;
     margin-right: 0;
-  /* height: auto; */
   }
 
   .proj-label {
