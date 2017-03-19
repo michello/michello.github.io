@@ -13,6 +13,17 @@
     <script src="js/jqfloat.js"></script>
     <script src ="js/typed.js"></script>
     <script src ="js/script.js"></script>
+
+    <script>
+    function myFunction() {
+      var x = document.getElementById("topNav");
+      if (x.className === "topnav") {
+          x.className += " responsive";
+      } else {
+          x.className = "topnav";
+      }
+    }
+    </script>
     
 </head>
 
@@ -20,6 +31,34 @@
 
 
 <body>
-<center>UNDER CONSTRUCTION</center>
+  
+  <header>
+    <h1><a href="/index.html">Michelle Lam</a></h1>
+    <!-- navigation -->
+    <nav class = "nav-main" id = "topNav">
+      <a href="projects.html">projects</a>
+      <a href ="document/Michelle_Lam_Resume.pdf" target="_blank">resume</a>
+      <a href="contact.html">contact</a>
+      <a href="javascript:void(0);" class="toggle-nav" onclick="myFunction()">&#9776;</a>
+    </nav>
+    
+  </header>
+
+  <div class = "mainImage">
+    <img src = "img/floating-penguin.png"> 
+  </div>
+  <div class = "outer">
+    <div class = "middle">
+      <div class = "inner">
+          
+          <div id = "side">
+            <p>Hi there! My name is Michelle. And I'm an aspiring web developer.</p>
+            <p>
+              As an NYU sophomore majoring in computer science, I <span class="message"></span>
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
 
 </body>

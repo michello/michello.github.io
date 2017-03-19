@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
 	$('.toggle-nav').click(function(e) {
 		$(this).toggleClass('active');
 		$('.nav-main ul').toggleClass('active');
@@ -13,15 +14,4 @@ $(document).ready(function() {
           contentType: 'text'
     });	
 
-
-
-/*
-	$('#mainImage').jqFloat({
-		width: 100,
-		height: 100,
-		speed: 1000,
-		minHeight: 100
-
-	});
-*/
 });
