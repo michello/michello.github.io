@@ -1,12 +1,13 @@
 /* general stuff */
 
 * {
-  font-family: arial;
+  font-family: 'Open Sans', sans-serif;
 }
 
 body {
-  margin: 3.5em;
+  margin: 3%;
 }
+
 
 @font-face {
   font-family: GlossBloom;
@@ -123,17 +124,35 @@ nav li a:hover{
 
 /* homepage stuff */
 
-#mainImage img {
+
+
+.mainImage img {
   width: 40%;
   height: auto;
   float: left;
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+  transform: rotate(-5deg);
+  animation: MoveUpDown 10s linear infinite;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 100px;
+  }
+  100% {
+    bottom: 0;
+  }
 }
 
 #side {
   margin-left: 3%;
   margin-top: -5%;
   width: 50%;
-  font-size: 2em;
+  font-size: 1.5em;
   float: right;
 }
 
@@ -170,10 +189,10 @@ nav li a:hover{
   width: 25%;
   margin-right: 2em;
   margin-bottom: 2em;
-  /* height: auto; */
 }
 
 .proj-img {
+  background-color: #e0e0e1;
   height: 80%;
   width: 100%;
   overflow: hidden;
@@ -184,9 +203,9 @@ nav li a:hover{
   text-transform: uppercase;
   margin-left: auto;
   margin-right: auto;
-  background-color:#e0e0e1;
+  background-color:#6b7074;
   letter-spacing: 0.1em;
-  color: #131313;
+  color: #fff;
   width: 10em;
   padding: 0.5em;
   position: relative;
@@ -291,7 +310,90 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
   text-decoration: none;
 }
 
+/* contact section */
 
+#wrapper {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  display:table;
+  text-align: center;
+}
+
+#hmu, #msg {
+  display:table-cell;
+  vertical-align:middle;
+  height: 100%;
+}
+
+#hmu {
+  font-size: 3em;
+  display: inline-block;
+}
+
+#msg {
+  text-align: left;
+  font-size: 2em;
+  display: inline-block;
+}
+
+.social-media-icons {
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+}
+
+#icon {
+  float: left;
+  width: 10%;
+  margin-right: 5%;
+  height: auto;
+}
+
+#last-icon {
+  float: left;
+  width: 15%;
+  height: auto;
+}
+
+.email {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 106%;
+  margin-left: -3%;
+  background-color: #f4f5f6;
+  height: auto;
+  text-align: center;
+}
+
+.emailForm {
+  width: 20%;
+}
+
+input, textarea {
+  padding: 0.5em;
+  width: 100%;
+  line-height: 2em;
+}
+
+input[type=text], input[type=email], textarea, #submit {
+  border:1px solid #ccc;
+  background-color: #e0e0e1;
+  color: #6b7074;
+}
+
+textarea {
+  resize: none;
+}
+
+#submit {
+  width: 100%;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 /* media queries for responsive design*/
 @media screen and (max-width: 1200px) {
@@ -357,11 +459,29 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
   }
 
   /* homepage stuff */
-  #mainImage img, #side {
-    width: 100%;
+  .mainImage img, #side {
+    width: 90%;
+    height: auto;
     float: none;
   }
 
+  .outer {
+    display: block;
+    position: absolute;
+    height: auto;
+    text-align: center;
+    width: 95%;
+  }
+
+  .middle {
+    text-align: left;
+    display: block;
+    vertical-align: none;
+  }
+
+  .inner {
+    width: auto;
+  }
 
 
   /* project section */
@@ -376,6 +496,20 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
     width: 30%;
   }
 
+  /* project pop up section */
+  div > .image {
+    height:0px;
+    float: none;
+    display: none;
+  }
+
+  div > .descript {
+    text-align: left;
+    width: 100%;
+    float: none;
+    font-size: 0.75em;
+    margin-right: none;
+  }
 
 }
 

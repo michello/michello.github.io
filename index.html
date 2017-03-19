@@ -6,21 +6,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- google font -->
+    <link href = "https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src ="js/script.js"></script>
+    <script src="js/jqfloat.js"></script>
     <script src ="js/typed.js"></script>
-    <script>
-      $(function(){
-        $(".message").typed({
-          strings: ["like to program.", "am part of Tech@NYU's infrastructure team.", "am a hackathon enthusiast.", "live, breathe and drink coffee.", "helped organized a hackathon called Social Hacks!"],
-          typeSpeed: 40,
-          shuffle: true,
-          loop: true,
-          contentType: 'text'
-        });
-      });
-    </script>
-
+    <script src ="js/script.js"></script>
+    
 </head>
 
 
@@ -29,14 +22,14 @@
 <body>
 
   <header>
-    <h1><a href="#">Michelle Lam</a></h1>
+    <h1><a href="/index.html">Michelle Lam</a></h1>
 
     <!-- navigation -->
 
     <nav class = "nav-main">
       <ul class = "active">
         <li><a href="projects.html">projects</a></li>
-        <li><a href ="document/Michelle_Lam_Resume.pdf">resume</a></li>
+        <li><a href ="document/Michelle_Lam_Resume.pdf" target="_blank">resume</a></li>
         <li><a href="contact.html">contact</a></li>
       </ul>
       <a class = "toggle-nav" href = "#">&#9776;</a>
@@ -44,16 +37,17 @@
     
   </header>
 
+  <div class = "mainImage">
+    <img src = "img/floating-penguin.png"> 
+  </div>
   <div class = "outer">
     <div class = "middle">
       <div class = "inner">
-          <div id = "mainImage">
-            <img src = "https://www.wpfreeware.com/wp-content/uploads/2014/09/placeholder-images.jpg">
-          </div>
+          
           <div id = "side">
             <p>Hi there! My name is Michelle. And I'm an aspiring web developer.</p>
             <p>
-              A NYU sophomore majoring in computer science, I <span class="message"></span>
+              As an NYU sophomore majoring in computer science, I <span class="message"></span>
             </p>
           </div>
       </div>
