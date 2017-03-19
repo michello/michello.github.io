@@ -343,16 +343,23 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
   height: auto;
 }
 
-.first-icon {
-  margin-left: 20%;
-}
-
-#icon {
+.icon {
   float: left;
   width: 10%;
   margin-right: 5%;
   height: auto;
 }
+
+.first-icon {
+  margin-left: 20%;
+}
+
+
+.last-icon {
+  margin-right: 0%;
+}
+
+
 
 .email {
   padding-top: 2%;
