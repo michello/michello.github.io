@@ -10,25 +10,38 @@
     <!-- google font -->
     <link href = "https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script type = "text/javascript" src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
 
     <script type="text/javascript">
-    $(document).ready(function(){ 
-      var h1 = $("#programming").height();
-      var h2 = $("#designing").height();
-      $("#programming,#designing").height(Math.max(h1, h2));
-    //  $("#designing").hide();
-    });
+      $(document).ready(function() {
+        var h1 = $("#programming").height();
+        var h2 = $("#div2").height();
+        $("#programming,#div2").height(Math.max(h1, h2));
+        $("#div2").hide();
+      });
 
-    $("#program").live('click', function() {
-      $("#programming").show();
-      $("#designing").hide();
-    });
-
-    $("#design").live('click', function() {
-      $("#designing").show();
-      $("#programming").hide();
-    });
+      $(function() {
+        $('#lnk1').click(function(){
+          $('#programming').toggle(
+            function(){
+              $('#programming').show();
+            },
+            function(){
+              $('#div2').hide();
+            });
+        });
+      });
+      
+      $(function() {
+        $('#lnk2').click(function(){
+          $('#div2').toggle(
+            function() {
+              $('#div2').show();
+            },
+            function() {
+              $('#programming').hide();
+            });
+        });
+      });
 
     </script>
 
@@ -54,18 +67,175 @@
     </nav>
     
   </header>
+    <p><h2><a href="#" id="lnk1">Programming</a> // <a href="#" id="lnk2">Graphic Art</a></h2></p>
 
-  <h2>
-    <a id = "#program" href = "#programming">Programming</a>
-    <a id = "#design" href = "#design">Design</a>
-  </h2>
+    <div id="divParent">
+      <div id="programming">
+        <div class = "row">
 
-  <div id = "programming">
-    <h2>Programming Projects</h2>
-  </div>
+          <!-- project 1 -->
+          <div class = "proj">
+            <a href = "#proj1">
+              <div class = "proj-img">
+                <img src = "img/Alertify-logo.png">
+              </div>
+            </a>
+            <div class = "proj-label">
+              Alertify
+            </div>
+          </div>
 
-  <div id = "designing">
-    <h2>Design & Graphic Art</h2>
-  </div>
+          <!-- project 1 info -->
+          <div id="proj1" class="modalDialog">
+            <div>
+              <div id = "proj-close">
+                <a href="#close" title="Close" class="close">X</a>
+              </div>  
+              <div id = "proj-content">
+                <div class = "image">
+                  <img src = "img/Alertify-logo.png">
+                </div>
+                <div class = "descript">
+                  <h1>
+                    Alertify
+                    <a href = "https://github.com/ml4963/Alertify">
+                      <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </h1>
+                  <p>
+                    Alertify is a mobile app designed to get you the help you're familiar with
+                    wherever you are and whenever you are.
+                  </p>
+                  <p>
+                    With a click of our app in your times 
+                    of need, the app will immediately send an emergency text message to the contacts
+                    that are nearby and can immediately srping into action.
+                  </p>
+                  <a href = "https://devpost.com/software/alertify-fy06qp" class = "proj-link">Check out on Devpost → </a>
+                  
+                  <h3>Tech&Tools Used</h3>
+                  <div id = "tags">
+                    <span class = "tag">Python</span>
+                    <span class = "tag">Photoshop</span>
+                    <span class = "tag">Kivy</span>
+                    <span class = "tag">Twilio API</span>
+                    <span class = "tag">Geolocation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+          <!-- project 2 -->
+          <div class = "proj">
+            <a href = "#proj2">
+              <div class = "proj-img">
+                <img src = "https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/369/030/datas/gallery.jpg">
+              </div>
+            </a>
+            <div class = "proj-label">
+              Foodifai
+            </div>
+          </div>
+
+          <div id="proj2" class="modalDialog">
+            <div>
+              <div id = "proj-close">
+                <a href="#close" title="Close" class="close">X</a>
+              </div>  
+              <div id = "proj-content">
+                
+                <img src = "https://challengepost-s3-challengepost.netdna-ssl.com/photos/production/software_photos/000/369/030/datas/gallery.jpg" class = "image">
+                
+                <div class = "descript">
+                  <h1>
+                    Foodifai
+                    <a href = "https://github.com/jchen2186/Foodifai">
+                      <i class="fa fa-github" aria-hidden="true"></i>
+                    </a>
+                  </h1>
+                  <p>
+                    Foodifai allows users to submit a photo either from their library or by taking a new photo. The photo is then analyzed and local restaurant recommendations are presented based on what is in the photo. The user can then request an Uber from within the app to get to where they want to go. Users never have to enter in a single line of text.
+                  </p>
+                  
+                  <a href = "https://devpost.com/software/foodifai-aemyrj" class = "proj-link">Check out on Devpost → </a>
+                  
+                  <h3>Tech&Tools Used</h3>
+                  <div id = "tags">
+                    <span class = "tag">Python</span>
+                    <span class = "tag">Flask</span>
+                    <span class = "tag">HTML/CSS</span>
+                    <span class = "tag">Photoshop</span>
+                    <span class = "tag">Clarifai API</span>
+                    <span class = "tag">Foursquare API</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class = "proj-lst">
+            <div class = "proj-img">
+            </div>
+            <div class = "proj-label">
+              NYU Go
+            </div>
+          </div>
+
+        </div>
+
+        <div class = "row">
+
+          <div class = "proj">
+            <a href = "#">
+              <div class = "proj-img"></div>
+            </a>
+            <div class = "proj-label">
+              Rendezvous
+            </div>
+          </div>
+        
+          <div class = "proj">
+            <div class = "proj-img">
+            </div>
+            <div class = "proj-label">
+              EduTize
+            </div>
+          </div>
+
+          <div class = "proj-lst">
+            <div class = "proj-img">
+            </div>
+            <div class = "proj-label">
+              GoH
+            </div>
+          </div>
+
+        </div>
+
+        <div class = "row">
+          <div class = "proj-lst">
+            <div class = "proj-img">
+            </div>
+            <div class = "proj-label">
+              Track the Flow
+            </div>
+          </div>
+        </div>
+
+      </div>  
+
+      <div id="div2">
+        these are the contents of div 2
+        the quick brown fox jumsp over the lazy dog
+      </div>
+    </div>
+
+    
+
+
 
 </body>

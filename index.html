@@ -15,14 +15,18 @@
     <script src ="js/script.js"></script>
 
     <script>
-    function myFunction() {
-      var x = document.getElementById("topNav");
-      if (x.className === "topnav") {
-          x.className += " responsive";
-      } else {
-          x.className = "topnav";
-      }
-    }
+    $(document).ready(function(){
+    $("#nav-mobile").html($("#nav-main").html());
+    $("#nav-trigger span").click(function(){
+        if ($("nav#nav-mobile ul").hasClass("expanded")) {
+            $("nav#nav-mobile ul.expanded").removeClass("expanded").slideUp(250);
+            $(this).removeClass("open");
+        } else {
+            $("nav#nav-mobile ul").addClass("expanded").slideDown(250);
+            $(this).addClass("open");
+        }
+    });
+});
     </script>
     
 </head>
@@ -32,6 +36,6 @@
 
 <body>
   
-  <h1>Under Construction</h1>
+  UNDER CONSTRUCTION
 
 </body>
