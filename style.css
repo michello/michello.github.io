@@ -26,12 +26,11 @@ h1 a {
 }
 
 h2 {
-  font-family: 'GlossBloom';
   font-size: 1.5em;
   letter-spacing: 0.20em;
   text-transform: uppercase;
   text-align: center;
-  margin-bottom: 1.75em;
+  margin-bottom: -0.25em;
 }
 
 h2 a {
@@ -60,23 +59,29 @@ header h1 {
 }
 
 .topnav {
+  text-align: right;
+  margin-right: 0px;
   line-height: 1.5em;
   background-color: #fff;
   overflow: hidden;
 }
 
+
 /* Style the links inside the navigation bar */
 .topnav a {
-  float: right;
-  display: block;
+  display: inline-block;
   color: #000;
-  text-align: right;
-  width: 10%;
+  text-align: left;
+  width: auto;
   margin-right: 1%;
   font-size: 0.75em;
   letter-spacing: 0.20em;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+.topnav a:first-child {
+  float: left;
 }
 
 .topnav a:last-child {
@@ -245,11 +250,14 @@ header h1 {
   padding: 1em;
   background: #fff;
   overflow:auto;
+  font-weight: normal;
+  text-transform: none;
  
 }
 
 div > .image {
-  width: 30%;
+  width: 45%;
+  margin-right: 5%;
   height: auto;
   float: left;
 }
@@ -259,7 +267,6 @@ div > .descript {
   width: 50%;
   float: right;
   font-size: 0.75em;
-  margin-right: 5%;
 }
 
 #proj-close {
@@ -305,6 +312,19 @@ a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
   color: #000;
   text-decoration: none;
 }
+
+#design {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* individual design project section */
+.indvProj-side {
+  float: left;
+  width: 10%;
+}
+
 
 /* contact section */
 
@@ -403,7 +423,7 @@ textarea {
   /* navbar */
   header h1 {
     width: 50%;
-    float: left;
+    float: none;
     display: block;
   }
 
@@ -413,7 +433,9 @@ textarea {
     display: block;
   }
 
-  .topnav.responsive {position: relative;}
+  .topnav.responsive {
+    position: relative;
+  }
   .topnav.responsive a.icon {
     position: absolute;
     right: 0;
@@ -474,6 +496,8 @@ textarea {
   }
 
   div > .descript {
+    font-weight: normal;
+    text-transform: none;
     text-align: left;
     width: 100%;
     float: none;
@@ -509,6 +533,5 @@ textarea {
   nav#nav-main {
     display: none; }
 
-  nav#nav-mobile {
-    display: block; }
+
 }
