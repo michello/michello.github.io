@@ -496,8 +496,6 @@ textarea {
   }
 
   div > .descript {
-    font-weight: normal;
-    text-transform: none;
     text-align: left;
     width: 100%;
     float: none;
