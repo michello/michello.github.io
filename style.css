@@ -44,6 +44,20 @@ h3 {
   text-transform: uppercase;
 }
 
+h3 > a {
+  text-decoration: none;
+}
+
+h3 > a:visited {
+  color: black;
+}
+
+h3 > a:hover {
+  color: #999999;
+}
+
+}
+
 
 /* navigation stuff */
 
@@ -189,7 +203,6 @@ header h1 {
   display: inline-block;
   width: 25%;
   margin-right: 2em;
-  margin-bottom: 2em;
 }
 
 .proj-img {
