@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<style>
+		body {
+			margin, padding: 0;
+			background-color: #43474e;
+		}
+
+		#canvas {
+			display: flex;
+			flex: 1;
+			align-items: center;
+	  		justify-content: center;
+	  		min-height: 80vh;
+		}
+
+		#ipod {
+			float: relative;
+			width: 10em;
+			height: 9em;
+			background-color: #91ad56;
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
+
+		#border-screen {
+			width: 9em;
+			height: 8em;
+			background-color: black;
+			position: relative;
+			border-radius: 0.5em;
+		}
+
+		#border-screen, #screen {
+			left: 0.5em;
+			top: 0.5em;
+			position: relative;
+		}
+
+		#screen {
+			width: 8em;
+			height: 7em;
+			background-color: #c2c2c2;
+		}
+
+		#buttons {
+			display: flex;
+    		flex: 1;
+			align-items: baseline;
+			margin-top: -4.6em;
+			position: absolute;
+		}
+
+		#button-1, #button-2, #button-3 {
+			float: left;
+			width: 1em;
+			height: 0.25em;
+			background-color: #cfd6c6;
+		}
+
+		#button-2 {
+			margin-left: 1em;
+		}
+
+		#button-3 {
+			width: 1.25em;
+			margin-left: 3em;
+		}
+
+	</style>
+</head>
+<body>
+	<div id = "canvas" class = "element">
+		<div id = "buttons">
+			<div id = "button-1"></div>
+			<div id = "button-2"></div>
+			<div id = "button-3"></div>
+		</div>
+		<div id = "ipod">
+			<div id = "border-screen">
+				<div id = "screen">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
