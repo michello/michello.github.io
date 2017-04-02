@@ -2,29 +2,40 @@
 <html lang="en">
 
 <head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
 	<style>
+
 		body {
 			margin, padding: 0;
 			background-color: #43474e;
+			color: #ececed;
 		}
 
+		#ipod, #border-screen, #screen, #wire {
+			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+		}
 		#canvas {
 			display: flex;
 			flex: 1;
 			align-items: center;
 	  		justify-content: center;
 	  		min-height: 80vh;
+	  		overflow: hidden;
 		}
+
+		/* ipod & screen */
 
 		#ipod {
 			float: relative;
 			width: 10em;
 			height: 9em;
 			background-color: #91ad56;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
 
 		#border-screen {
+			top: 0.5em;
 			width: 9em;
 			height: 8em;
 			background-color: black;
@@ -34,16 +45,22 @@
 
 		#border-screen, #screen {
 			left: 0.5em;
-			top: 0.5em;
 			position: relative;
 		}
 
 		#screen {
+			top: 0.5em;
 			width: 8em;
 			height: 7em;
-			background-color: #c2c2c2;
+			text-align: center;
 		}
 
+		#album-art {
+			width: 100%;
+			height: 100%;
+		}
+
+		/* top set of buttons */
 		#buttons {
 			display: flex;
     		flex: 1;
@@ -64,11 +81,80 @@
 		}
 
 		#button-3 {
-			width: 1.25em;
+			width: 1.75em;
 			margin-left: 3em;
 		}
 
+		/* CSS wire/headphones */
+		#bottom {
+			position: absolute;
+		}
+
+		#tip {
+			position: absolute;
+			width: 1em;
+			height: 2em;
+			margin-left: 3.5em;
+    		margin-top: 4.5em;
+			background-color: #cccccc;
+		}
+
+		#wire {
+			position: absolute;
+			margin-left: 3.75em;
+			margin-top: 6.5em;
+			width: 0.5em;
+			height: 33vh;
+			background-color: #666666;
+		}
+
+		#curve-1 {
+			position: absolute;
+			margin-left: 3.75em;
+			margin-top: 8.5em;
+			height: 2em;
+			width: 2em;
+			border: 0.5em solid #666666;
+			-moz-border-radius: 0 0 0 90px;
+    		border-radius: 0 0 0 90px;
+		}
+
+		#curve-1.width {
+			border-color: transparent transparent transparent #666666;
+		}
+
+		#curve-2 {
+			position: absolute;
+			margin-left: 6.25em;
+			margin-top: 8.5em;
+			height: 2em;
+			width: 2em;
+			border: 0.5em solid #666666;
+			border-color: transparent transparent transparent #666666;
+			-moz-border-radius: 0 0 180px 0px;
+    		border-radius: 0 0 180px 0px;
+		}
+
+
+		#curve-2.width {
+			border-color: transparent transparent #666666 transparent;
+		}
+
+		/* message & instruction */
+		.message {
+			top: 0em;
+			right: 1em;
+			position: absolute;
+			font-size: 10px;
+			width: 20%;
+			color: white;
+			font-family: arial;
+			text-align: justify;
+
+		}
+
 	</style>
+
 </head>
 <body>
 	<div id = "canvas" class = "element">
@@ -80,9 +166,125 @@
 		<div id = "ipod">
 			<div id = "border-screen">
 				<div id = "screen">
+					<div id = "album-art"></div>
+					<h1 id = "title"></h1>
+					<!-- <h2 id = "artist"></h2> -->
 				</div>
 			</div>
 		</div>
+		<div id = "bottom">
+			<div id = "tip"></div>
+			<div id = "wire"></div>
+		</div>
 	</div>
+
+
+
+	<!-- the audio -->
+
+	<audio data-index = "0" data-title = "Entertain The Pain" data-artist = "My Favorite Highway" src = "audio/Entertain The Pain.mp3"></audio>
+	<audio data-index = "1" data-title = "Feel Again" data-artist = "One Republic" src = "audio/Feel Again.mp3"></audio>
+	<audio data-index = "2" data-title = "Troublemaker" data-artist = "Olly Murs" src = "audio/Troublemaker.mp3"></audio>
+
+	<!-- the album cover -->
+
+	<!-- the message -->
+	<div class = "message">
+		<h1>inspo</h1>
+		<p id = "inspo">
+			When I was in middle school, I was sadly mugged at a train station and robbed of my iPod. Inspired by this experience, I decided to replicate my iPod (in the form of an iPod Nano, which I also had, strangely) and have it play the playlist I used to have in middle school. Hope you enjoy listening as much as I enjoyed making this!
+		</p>
+		<h1>takeaway</h1>
+		<p id = "takeaway">
+			<ul>
+				<li>CSS art! It was loads of fun learning how to play around with the shapes to create something even if they were of super basic shapes.
+				</li>
+				<li>Javascript >>> jQuery in complexity. With only three all nighters worth of jQuery, I found Javascript to be a pretty fun challenge, since I'm pretty sure jQuery has a module for some functions I had to construct with just pure Javascript.
+				</li>
+			</ul>
+		</p>
+		<h1>future improv</h1>
+		<p id = "futureImprov">
+			<ul>
+				<li>Improve CSS art? Earphone line are super simplistic. Would love to improve on this.</li>
+				<li>Better way to loop through songs once all are played but people haven't paused. As a temporary solution, I just passed in the function recursively but idk if that's the proper way. It seems like a waste of space but for now it gets the job done.
+				</li>
+				<li>More functionality! If I had more time, I'd totally add features such as fast forward & to be able to display lyrics according to whatever song is being played!
+				</li>
+				<li>Integrate song API. The songs are saved and stored locally in their own folder but ideally, I would love for the app to just make some API calls to get and play the song.
+				</li>
+			</ul>
+		</p>
+	</div>
+
+	<script>
+		
+
+
+		// the playlist
+		var songList = ['Entertain The Pain', 'Feel Again', 'Troublemaker'];
+		var place = 0; // starting from the first song in the songList
+		window.addEventListener('keydown', keyPressed, false);
+
+		function playAudio(index) {
+			audio.pause();
+			audio = document.querySelector('audio[data-index="' + index + '"]');
+			audio.play();
+			document.getElementById('album-art').innerHTML = "<img src ='img/album-art/" + songList[index] + ".png' id = 'album-art'>";
+			
+		}
+
+		function keyPressed(e){
+
+			switch (e.keyCode) {
+
+				case 32: // space bar
+					
+					audio = document.querySelector('audio[data-index="' + place + '"]');
+
+					// document.getElementById('title').innerHTML = songList[place];  
+					document.getElementById('album-art').innerHTML = "<img src ='img/album-art/" + songList[place] + ".png' id = 'album-art'>";
+					if (!audio.paused) { // if audio is playing but you press the space bar
+						audio.pause();
+					}
+					else { // if audio is not playing but you press the space bar
+						audio.play();
+					}
+
+					audio.onended = function() { // if audio is done playing
+						console.log("this is looping!")
+						if (place == 2) { // if we're looking at the last element/song
+							place = -1;		// set the element to -1 so we can get back to the 
+						}					// first elemnt when we add 1
+						place += 1;
+						e.keyCode = 32;
+						audio.pause();
+						keyPressed(e);	// recursively pass the spacebar action again as we're not pausing or
+					}					// anything
+
+					break;
+
+				case 39: // forward key
+					if (place == 2) {	// if we're at the last song,
+						place = -1;		// set the place to -1, so we can go to the first index when we
+					}					// increment
+					place += 1;			// incrementing to the next song
+					playAudio(place);	// play the song
+					console.log("forward key is pressed");
+					break;
+
+				case 37: // backward key
+					if (place == 0) {	// if we're at the very first song
+						place = 3; 		// set the place to 3, so we can go to the last index when we decrement
+					}
+					place -= 1;			// decrementing to the previous song
+					playAudio(place);	// play the song
+					console.log("backward key is pressed");
+					break;
+			}
+		};
+	</script>
+
+
 </body>
 </html>
