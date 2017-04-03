@@ -16,19 +16,22 @@
 		#ipod, #border-screen, #screen, #wire {
 			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 		}
+
+		#content {
+			height: 100%;
+			overflow: hidden;
+		}
+
 		#canvas {
-			display: flex;
-			flex: 1;
-			align-items: center;
-	  		justify-content: center;
-	  		min-height: 80vh;
-	  		overflow: hidden;
+			bottom: 40vh;
+	  		margin-left: 40%;
+	  		position: absolute;
 		}
 
 		/* ipod & screen */
 
 		#ipod {
-			float: relative;
+			position: relative;
 			width: 10em;
 			height: 9em;
 			background-color: #91ad56;
@@ -62,10 +65,8 @@
 
 		/* top set of buttons */
 		#buttons {
-			display: flex;
-    		flex: 1;
-			align-items: baseline;
-			margin-top: -4.6em;
+			margin-top: -0.25em;
+			margin-left: 1em;
 			position: absolute;
 		}
 
@@ -87,24 +88,21 @@
 
 		/* CSS wire/headphones */
 		#bottom {
-			position: absolute;
+			
 		}
 
 		#tip {
-			position: absolute;
 			width: 1em;
 			height: 2em;
-			margin-left: 3.5em;
-    		margin-top: 4.5em;
+			margin-left: 8em;
 			background-color: #cccccc;
 		}
 
 		#wire {
 			position: absolute;
-			margin-left: 3.75em;
-			margin-top: 6.5em;
+			margin-left: 8.25em;
 			width: 0.5em;
-			height: 33vh;
+			height: 40vh;
 			background-color: #666666;
 		}
 
@@ -153,28 +151,74 @@
 
 		}
 
+		.instruction {
+			top: 0em;
+			left: 1em;
+			position: absolute;
+			font-size: 10px;
+			width: 20%;
+			font-family: arial;
+			text-align: justify;
+		}
+
+		.keystroke {
+			font-size: 1.25em;
+			color: #666666;
+			text-transform: uppercase;
+			border: 0.2em solid #666666;
+			padding-left: 1em;
+			padding-right: 1em; 
+		}
+
+		.playing  {
+			position: relative;
+			left: 1em;
+			width: 20%;
+		}
+
+		/* headers */
+		h2 {
+			margin-top: -0.25em;
+			text-align: left;
+		}
+
+		#song {
+			font-family: georgia;
+			font-size: 4em;
+			word-wrap: break-word;
+		}
+
+		#artist {
+			margin-top: -1em;
+			margin-left: 9em;
+		}
+
+
+
 	</style>
 
 </head>
 <body>
-	<div id = "canvas" class = "element">
-		<div id = "buttons">
-			<div id = "button-1"></div>
-			<div id = "button-2"></div>
-			<div id = "button-3"></div>
-		</div>
-		<div id = "ipod">
-			<div id = "border-screen">
-				<div id = "screen">
-					<div id = "album-art"></div>
-					<h1 id = "title"></h1>
-					<!-- <h2 id = "artist"></h2> -->
+	<div id = "content">
+		<div id = "canvas" class = "element">
+			<div id = "buttons">
+				<div id = "button-1"></div>
+				<div id = "button-2"></div>
+				<div id = "button-3"></div>
+			</div>
+			<div id = "ipod">
+				<div id = "border-screen">
+					<div id = "screen">
+						<div id = "album-art"></div>
+						<h1 id = "title"></h1>
+						<!-- <h2 id = "artist"></h2> -->
+					</div>
 				</div>
 			</div>
-		</div>
-		<div id = "bottom">
-			<div id = "tip"></div>
-			<div id = "wire"></div>
+			<div id = "bottom">
+				<div id = "tip"></div>
+				<div id = "wire"></div>
+			</div>
 		</div>
 	</div>
 
@@ -186,7 +230,22 @@
 	<audio data-index = "1" data-title = "Feel Again" data-artist = "One Republic" src = "audio/Feel Again.mp3"></audio>
 	<audio data-index = "2" data-title = "Troublemaker" data-artist = "Olly Murs" src = "audio/Troublemaker.mp3"></audio>
 
-	<!-- the album cover -->
+	<!-- the instruction -->
+	<div class = "instruction">
+		<h1 style = "color: #666666">MICHELLE'S IPOD NANO</h1>
+		<h1>Instructions</h1>
+		<p><span class = "keystroke">space</span>&emsp;pause/play song</p>
+		<p><span class = "keystroke">→</span>&emsp;next song</p>
+
+		<p><span class = "keystroke">←</span>&emsp;previous song</p>
+
+		<h1 id = "update">playing...</h1>
+		<h2 id = "song">Song</h2>
+		<h2 id = "artist">Artist</h2>
+
+	</div>
+
+	
 
 	<!-- the message -->
 	<div class = "message">
@@ -223,6 +282,13 @@
 
 		// the playlist
 		var songList = ['Entertain The Pain', 'Feel Again', 'Troublemaker'];
+
+		// song & their artist
+		var artist = {'Entertain The Pain':'My Favorite Highway',
+						'Feel Again':'One Republic',
+						'Troublemaker':'Olly Murs'
+					};
+
 		var place = 0; // starting from the first song in the songList
 		window.addEventListener('keydown', keyPressed, false);
 
@@ -230,7 +296,14 @@
 			audio.pause();
 			audio = document.querySelector('audio[data-index="' + index + '"]');
 			audio.play();
+			addSongFeature(index);
+			
+		}
+
+		function addSongFeature(index) {
 			document.getElementById('album-art').innerHTML = "<img src ='img/album-art/" + songList[index] + ".png' id = 'album-art'>";
+			document.getElementById('song').innerHTML = songList[index];
+			document.getElementById('artist').innerHTML = artist[songList[index]];
 			
 		}
 
@@ -243,7 +316,7 @@
 					audio = document.querySelector('audio[data-index="' + place + '"]');
 
 					// document.getElementById('title').innerHTML = songList[place];  
-					document.getElementById('album-art').innerHTML = "<img src ='img/album-art/" + songList[place] + ".png' id = 'album-art'>";
+					addSongFeature(place);
 					if (!audio.paused) { // if audio is playing but you press the space bar
 						audio.pause();
 					}
