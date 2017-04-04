@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<style>
 
 		body {
@@ -87,10 +88,6 @@
 		}
 
 		/* CSS wire/headphones */
-		#bottom {
-			
-		}
-
 		#tip {
 			width: 1em;
 			height: 2em;
@@ -140,15 +137,19 @@
 
 		/* message & instruction */
 		.message {
-			top: 0em;
-			right: 1em;
-			position: absolute;
-			font-size: 10px;
-			width: 20%;
+			float: right;
+			margin-top: -2.25%;
+			font-size: 0.7em;
+			width: 30%;
 			color: white;
 			font-family: arial;
 			text-align: justify;
 
+		}
+
+		div > .descript {
+			width: auto;
+			float: none;
 		}
 
 		.instruction {
@@ -176,6 +177,16 @@
 			width: 20%;
 		}
 
+		p#descript, ul#descript {
+			float: none;
+			position: relative;
+		}
+
+		.visible {
+			position: absolute;
+			display: block;
+		}
+
 		/* headers */
 		h2 {
 			margin-top: -0.25em;
@@ -193,7 +204,32 @@
 			margin-left: 9em;
 		}
 
+		.header::after {
+			content: "[+]";
+		}
 
+		.descript {
+			position: relative;
+			display: none;
+		}
+
+		.header {
+			position: relative;
+			display: block;
+		}
+		.visible {
+			display: block;
+		}
+
+		button {
+			position:relative;
+			display: block;
+			border: none;
+			text-decoration: none;
+			background: none;
+			margin: none;
+			color: #fff;
+		}
 
 	</style>
 
@@ -249,22 +285,24 @@
 
 	<!-- the message -->
 	<div class = "message">
-		<h1>inspo</h1>
-		<p id = "inspo">
-			When I was in middle school, I was sadly mugged at a train station and robbed of my iPod. Inspired by this experience, I decided to replicate my iPod (in the form of an iPod Nano, which I also had, strangely) and have it play the playlist I used to have in middle school. Hope you enjoy listening as much as I enjoyed making this!
-		</p>
-		<h1>takeaway</h1>
-		<p id = "takeaway">
-			<ul>
-				<li>CSS art! It was loads of fun learning how to play around with the shapes to create something even if they were of super basic shapes.
-				</li>
-				<li>Javascript >>> jQuery in complexity. With only three all nighters worth of jQuery, I found Javascript to be a pretty fun challenge, since I'm pretty sure jQuery has a module for some functions I had to construct with just pure Javascript.
-				</li>
+		<div class = "container">
+			<button><h1 class = "header">inspo</h1></button>
+			<p class= "descript">
+				When I was in middle school, I was sadly mugged at a train station and robbed of my iPod. Inspired by this experience, I decided to replicate my iPod (in the form of an iPod Nano, which I also had, strangely) and have it play the playlist I used to have in middle school. Hope you enjoy listening as much as I enjoyed making this!
+			</p>
+		</div>
+		<div class = "container">
+			<button><h1 class = "header">takeaway</h1></button>
+			<ul class = "descript">
+					<li>CSS art! It was loads of fun learning how to play around with the shapes to create something even if they were of super basic shapes.
+					</li>
+					<li>Javascript >>> jQuery in complexity. With only three all nighters worth of jQuery, I found Javascript to be a pretty fun challenge, since I'm pretty sure jQuery has a module for some functions I had to construct with just pure Javascript.
+					</li>
 			</ul>
-		</p>
-		<h1>future improv</h1>
-		<p id = "futureImprov">
-			<ul>
+		</div>
+		<div class = "container">
+			<button><h1 class = "header">future improv</h1></button>
+			<ul class = "descript">
 				<li>Improve CSS art? Earphone line are super simplistic. Would love to improve on this.</li>
 				<li>Better way to loop through songs once all are played but people haven't paused. As a temporary solution, I just passed in the function recursively but idk if that's the proper way. It seems like a waste of space but for now it gets the job done.
 				</li>
@@ -273,12 +311,21 @@
 				<li>Integrate song API. The songs are saved and stored locally in their own folder but ideally, I would love for the app to just make some API calls to get and play the song.
 				</li>
 			</ul>
-		</p>
+		</div>
 	</div>
 
 	<script>
 		
+		
 
+		$(document).ready(function(){
+			$('button').on('click', function(){
+				$(this).closest('.container').find('.descript').toggleClass('visible');
+				$(this).css();
+			});
+		});
+
+		// song functionality
 
 		// the playlist
 		var songList = ['Entertain The Pain', 'Feel Again', 'Troublemaker'];
@@ -294,10 +341,10 @@
 
 		function playAudio(index) {
 			audio.pause();
+			audio.currentTime = 0;
 			audio = document.querySelector('audio[data-index="' + index + '"]');
 			audio.play();
 			addSongFeature(index);
-			
 		}
 
 		function addSongFeature(index) {
