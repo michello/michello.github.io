@@ -156,10 +156,14 @@
 			top: 0em;
 			left: 1em;
 			position: absolute;
-			font-size: 10px;
-			width: 20%;
+			font-size: 0.75em;
+			width: 30%;
 			font-family: arial;
 			text-align: justify;
+		}
+
+		#title {
+			font-size: 0.25em;
 		}
 
 		.keystroke {
@@ -204,8 +208,12 @@
 			margin-left: 9em;
 		}
 
-		.header::after {
+		.expand::after {
 			content: "[+]";
+		}
+
+		.header::after {
+			content: "[-]";
 		}
 
 		.descript {
@@ -222,6 +230,8 @@
 		}
 
 		button {
+			outline: none;
+			border-style: none;
 			position:relative;
 			display: block;
 			border: none;
@@ -285,14 +295,15 @@
 
 	<!-- the message -->
 	<div class = "message">
+		<h1 style = "color: #666666">info here</h1>
 		<div class = "container">
-			<button><h1 class = "header">inspo</h1></button>
+			<button><h1 class = "expand header">inspo</h1></button>
 			<p class= "descript">
 				When I was in middle school, I was sadly mugged at a train station and robbed of my iPod. Inspired by this experience, I decided to replicate my iPod (in the form of an iPod Nano, which I also had, strangely) and have it play the playlist I used to have in middle school. Hope you enjoy listening as much as I enjoyed making this!
 			</p>
 		</div>
 		<div class = "container">
-			<button><h1 class = "header">takeaway</h1></button>
+			<button><h1 class = "expand header">takeaway</h1></button>
 			<ul class = "descript">
 					<li>CSS art! It was loads of fun learning how to play around with the shapes to create something even if they were of super basic shapes.
 					</li>
@@ -301,7 +312,7 @@
 			</ul>
 		</div>
 		<div class = "container">
-			<button><h1 class = "header">future improv</h1></button>
+			<button><h1 class = "expand">future improv</h1></button>
 			<ul class = "descript">
 				<li>Improve CSS art? Earphone line are super simplistic. Would love to improve on this.</li>
 				<li>Better way to loop through songs once all are played but people haven't paused. As a temporary solution, I just passed in the function recursively but idk if that's the proper way. It seems like a waste of space but for now it gets the job done.
@@ -321,7 +332,19 @@
 		$(document).ready(function(){
 			$('button').on('click', function(){
 				$(this).closest('.container').find('.descript').toggleClass('visible');
-				$(this).css();
+				var toggleHeader = $(this).closest('.container').find('h1');
+				console.log($(this).closest('.container').find('h1')[0]);
+				
+				/*
+				if $(this).closest('.container').find('h1').hasClass('expand') {
+					$(toggleHeader).removeClass('expand');
+					$(toggleHeader).addClass('header');
+				}
+				else {
+					$(toggleHeader).removeClass('header');
+					$(toggleHeader).addClass('expand');
+				} */
+					
 			});
 		});
 
