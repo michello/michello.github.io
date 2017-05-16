@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+      <title>coffiest</title>
+
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- stylesheet -->
+      <link rel="stylesheet" type="text/css" href="css/coffeeist-style.css">
+
+      <!-- javascript -->
+      <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script src ="js/coffeeist-script.js"></script>
+
+  </head>
+
+  <body>
+
+    <h1>the coffeeist</h1>
+    <h2>data visualization of coffee consumption</h2>
+
+    <div id = "container">
+
+        <select id = "filter" onclick="populateSelect()"> <!-- onChange = "showFilter()" -->
+          <option value = "default">Select Your Choice</option>
+          <option value = "exporting-countries">Exporting Countries</option>
+          <option value = "importing-countries">Importing Countries</option>
+          <option value = "regional">Regional</option>
+          <option value = "compare">Compare</option>
+        </select>
+
+
+
+        <select id = "exportCountries" class = "invisible">
+        </select>
+
+
+
+        <select id = "importCountries" class = "invisible">
+        </select>
+
+
+        <select id = "country1" class = "invisible">
+        </select>
+
+
+        <select id = "country2" class = "invisible">
+        </select>
+
+
+      <div id = "text">
+      </div>
+      <div id = "canvas">
+        <div id = "country-1">
+        </div>
+        <div id = "country-2">
+        </div>
+      </div>
+    </div>
+
+
+
+  </body>
+</html>

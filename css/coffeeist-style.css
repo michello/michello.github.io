@@ -1,0 +1,48 @@
+body {
+  background-color: #FFF8E7;
+}
+
+#country {
+  display: none;
+}
+
+.invisible {
+  display: none;
+}
+
+.visible {
+  display: block;
+}
+
+@font-face {
+  font-family: 'Unicorn Flakes';
+  src: url('/font/Unicorn Flakes.ttf');
+}
+
+h1 {
+  color: #a66c48;
+  font-family: 'Unicorn Flakes';
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 3em;
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+h2 {
+  color: #d2b5a3;
+  font-family: 'arial';
+  text-transform: uppercase;
+  font-size: 0.75em;
+  margin-top: -2.75em;
+}
+
+
+.styled-dd {
+  width: 20%;
+  height: auto;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
