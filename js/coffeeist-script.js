@@ -118,6 +118,7 @@ function populateSelect(){
 
     // displaying all the info of the exported country
     $('#exportCountries').change(function(){
+      $("#country-img").empty();
       var selCountry = $('#exportCountries').val(); // name of country you selected
       var coffeeConsump = json.responseJSON[0]["Exporting countries"][exportingCountries[selCountry]][selCountry]['2015/16'];
       var coffeeGrowthRatePerc = json.responseJSON[0]["Exporting countries"][exportingCountries[selCountry]][selCountry]['Growth Rate'];
