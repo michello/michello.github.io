@@ -143,6 +143,7 @@ function populateSelect(){
 
     // displaying all the info of the exported country
     $('#importCountries').change(function(){
+      clearCanvas();
       var selCountry = $('#importCountries').val(); // name of country you selected
 
       var coffeeConsump = json.responseJSON[2]["Importing countries"][importingCountries[selCountry]][selCountry]['2015/16'];
@@ -170,6 +171,7 @@ function populateSelect(){
 
     // displaying all the info of the exported country
     $('#regions').change(function(){
+      $("#country-img").empty();
       var selRegion = $('#regions').val(); // name of country you selected
 
       var coffeeConsump = json.responseJSON[1]["World"][regionalPlaces[selRegion]][selRegion]['2015/16'];
@@ -186,11 +188,11 @@ function populateSelect(){
   if (filter == 'compare') {
     clearCanvas();
 
+    // appending all possible lists:
     listOfexportCountries.forEach(function(country){
       $('#country1').append('<option value = '+ country +'>'+country+'</option>'); // appending each country to new populated dropdown
       $('#country2').append('<option value = '+ country +'>'+country+'</option>');
     })
-
 
     // making sure dropdown we're looking at is visible & other dropdowns not
     $('#country1').removeClass('invisible');
