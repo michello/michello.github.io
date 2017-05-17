@@ -7,57 +7,78 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
+      <!-- bootstrap -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+      <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
       <!-- stylesheet -->
       <link rel="stylesheet" type="text/css" href="css/coffeeist-style.css">
+
+
 
       <!-- javascript -->
       <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
       <script src ="js/coffeeist-script.js"></script>
 
+
+
   </head>
 
   <body>
 
-    <h1>the coffeeist</h1>
-    <h2 style = "color:#e5c7bc;">each coffee cup represents 1mil 60kg bags</h2>
-    <h2>data visualization of coffee consumption</h2>
-    <div id = "container">
-
-        <select id = "filter" onclick="populateSelect()"> <!-- onChange = "showFilter()" -->
-          <option value = "default">Select Your Choice</option>
-          <option value = "exporting-countries">Exporting Countries</option>
-          <option value = "importing-countries">Importing Countries</option>
-          <option value = "regional">Regional</option>
-          <option value = "compare">Compare</option>
-        </select>
+    <div class = "container">
+      <h1>the coffeeist</h1>
+      <h2 style = "color:#e5c7bc;">each coffee cup represents 1mil 60kg bags</h2>
+      <h2>data visualization of coffee consumption</h2>
 
 
+      <div class = "choices">
+          <select id = "filter"> <!-- onChange = "showFilter()" -->
+              <option value = "default">Select Your Choice</option>
+              <option value = "exporting-countries">Exporting Countries</option>
+              <option value = "importing-countries">Importing Countries</option>
+              <option value = "regional">Regional</option>
+              <option value = "compare">Compare</option>
+          </select>
 
-        <select id = "exportCountries" class = "invisible">
-        </select>
+          <select id = "exportCountries" class = "invisible">
+          </select>
 
+          <select id = "importCountries" class = "invisible">
+          </select>
 
+          <select id = "regions" class = "invisible">
+          </select>
 
-        <select id = "importCountries" class = "invisible">
-        </select>
+          <select id = "country1" class = "invisible">
+          </select>
 
+          <select id = "country2" class = "invisible">
+          </select>
 
-        <select id = "country1" class = "invisible">
-        </select>
-
-
-        <select id = "country2" class = "invisible">
-        </select>
-
+      </div>
 
       <div id = "text">
       </div>
-      <div id = "canvas">
-        <div id = "country-1">
-        </div>
-        <div id = "country-2">
-        </div>
+
+      <div id = "canvas" class = "choices">
+          <div id = "country">
+            <h3 id = "percentage"></h3>
+            <div id = "country-img">
+            </div>
+          </div>
+          <div id = "country-1">
+            <h3 id = "percentage-1"></h3>
+            <div id = "country-1-img"></div>
+          </div>
+          <div id = "country-2">
+            <h3 id = "percentage-2"></h3>
+            <div id = "country-2-img"></div>
+          </div>
       </div>
+
     </div>
 
 
