@@ -103,6 +103,39 @@
 			background-color: #666666;
 		}
 
+
+		#curve-1 {
+ 			position: absolute;
+ 			margin-left: 3.75em;
+ 			margin-top: 8.5em;
+ 		height: 2em;
+ 		width: 2em;
+ 			border: 0.5em solid #666666;
+ 			-moz-border-radius: 0 0 0 90px;
+     		border-radius: 0 0 0 90px;
+ 		}
+
+ 		#curve-1.width {
+			border-color: transparent transparent transparent #666666;
+ 		}
+
+ 		#curve-2 {
+ 			position: absolute;
+ 			margin-left: 6.25em;
+ 			margin-top: 8.5em;
+ 			height: 2em;
+ 		width: 2em;
+ 			border: 0.5em solid #666666;
+		border-color: transparent transparent transparent #666666;
+ 			-moz-border-radius: 0 0 180px 0px;
+     		border-radius: 0 0 180px 0px;
+ 		}
+
+
+ 		#curve-2.width {
+ 			border-color: transparent transparent #666666 transparent;
+ 		}
+
 		/* message & instruction */
 		.message {
 			float: right;
@@ -140,7 +173,7 @@
 			text-transform: uppercase;
 			border: 0.2em solid #666666;
 			padding-left: 1em;
-			padding-right: 1em; 
+			padding-right: 1em;
 		}
 
 		.playing  {
@@ -180,7 +213,7 @@
 			content: "[+]";
 		}
 
-		.close::after {
+		.header::after {
 			content: "[-]";
 		}
 
@@ -263,7 +296,7 @@
 
 	</div>
 
-	
+
 
 	<!-- the message -->
 	<div class = "message">
@@ -299,13 +332,13 @@
 	</div>
 
 	<script>
-		
+
 		// toggling right side content
 
 		$(document).ready(function(){
 			$('button').on('click', function(){
 				$(this).closest('.container').find('.descript').toggleClass('visible');
-				$(this).toggleClass('expand');
+				$(this).toggleClass('header');
 				$(this).toggleClass('close');
 			});
 		});
@@ -326,7 +359,7 @@
 		window.addEventListener('keydown', keyPressed, false);
 
 		function playAudio(index) {
-			audio.pause();			
+			audio.pause();
 			audio.currentTime = 0;
 			audio = document.querySelector('audio[data-index="' + index + '"]');
 			audio.play();
@@ -334,24 +367,21 @@
 		}
 
 		function addSongFeature(index) { // function for song stuff
+			document.getElementById('album-art').innerHTML = "<img src ='img/album-art/" + songList[index] + ".png' id = 'album-art'>";
+  			document.getElementById('song').innerHTML = songList[index];
+  			document.getElementById('artist').innerHTML = artist[songList[index]];
 
-
-
-			document.getElementById('album-art').innerHTML = "<img src ='img/album-art/" + songList[index] + ".png' id = 'album-art'>";												// current song art
-			document.getElementById('song').innerHTML = songList[index];			// current song
-			document.getElementById('artist').innerHTML = artist[songList[index]];	// current artist
-			
-		}
+		  		}
 
 		function keyPressed(e){
 
 			switch (e.keyCode) {
 
 				case 32: // space bar
-					
+
 					audio = document.querySelector('audio[data-index="' + place + '"]');
 
-					// document.getElementById('title').innerHTML = songList[place];  
+					// document.getElementById('title').innerHTML = songList[place];
 					addSongFeature(place);
 					if (!audio.paused) { // if audio is playing but you press the space bar
 						audio.pause();
@@ -363,7 +393,7 @@
 					audio.onended = function() { // if audio is done playing
 						console.log("this is looping!")
 						if (place == 2) { // if we're looking at the last element/song
-							place = -1;		// set the element to -1 so we can get back to the 
+							place = -1;		// set the element to -1 so we can get back to the
 						}					// first elemnt when we add 1
 						place += 1;
 						e.keyCode = 32;
