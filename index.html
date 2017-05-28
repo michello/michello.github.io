@@ -463,6 +463,9 @@
                 <p>
                   <textarea placeholder = "type your message here!" name = "message"></textarea>
                 </p>
+                <input type="text" name="_gotcha" style="display:none" />
+
+                <input type="hidden" name="_next" value="/index.html" />
                 <p>
                   <center><input type="submit" value="Send" id = "submit"></center>
                 </p>
@@ -481,6 +484,9 @@
       event.preventDefault();
       $(this).ekkoLightbox();
     });
+
+    var contactform =  document.getElementById('contactform');
+    contactform.setAttribute('action', '//formspree.io/' + 'm.lam' + '@' + 'nyu' + '.' + 'edu');
   </script>
 
 
