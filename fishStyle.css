@@ -20,8 +20,6 @@
     z-index: 2;
 }
 
-
-
 .fish > .body {
     position: absolute;
     height: 2.5em;
@@ -51,10 +49,6 @@
   margin-top: 1em;
 }
 
-#greenFish .body, #greenFish .fin, #greenFish .lower {
-	  background-color:#66b266;
-}
-
 div#redFish {
   animation: rightToLeft 11s linear infinite;
 }
@@ -68,8 +62,21 @@ div#orangeFish {
   animation: rightToLeft 10s linear infinite;
 }
 
+div#purpleFish {
+  margin-top: 4em;
+  animation: rightToLeft 10s linear infinite;
+}
+
+#greenFish .body, #greenFish .fin, #greenFish .lower {
+	  background-color:#66b266;
+}
+
 #orangeFish .body, #orangeFish .fin, #orangeFish .lower {
 	  background-color:#ffc04c;
+}
+
+#purpleFish .body, #purpleFish .fin, #purpleFish .lower {
+	  background-color:#9f93b8;
 }
 
 @keyframes rightToLeft {
