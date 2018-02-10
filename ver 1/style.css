@@ -1,0 +1,451 @@
+/* general stuff */
+
+
+
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  height: 100%;
+  padding: 0;
+}
+
+body {
+  margin-top: 7em;
+}
+
+@font-face {
+  font-family: 'GlossBloom';
+  src: url('Gloss_And_Bloom.ttf');
+}
+
+h1 {
+  font-size: 1em;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+h1 a {
+  text-decoration: none;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.5em;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: -0.25em;
+}
+
+h2 a {
+  text-decoration: none;
+  color: black;
+}
+
+h3 {
+  font-size: 0.75em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+h3 > a {
+  text-decoration: none;
+}
+
+h3 > a:visited {
+  color: black;
+}
+
+h3 > a:hover {
+  color: #999999;
+}
+
+}
+
+
+/* navigation stuff */
+
+header h1 {
+  font-size: 1.1em;
+  margin: 0px;
+  display: inline-block;
+  float: left;
+}
+
+.topnav {
+  text-align: right;
+  margin-right: 0px;
+  line-height: 1.5em;
+  background-color: #fff;
+  overflow: hidden;
+  position: fixed;
+  top: 0px;
+  z-index:1000;
+  width: 100%;
+}
+
+
+
+.topnav h1 {
+  font-weight: bold;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  display: inline-block;
+  color: #000;
+  text-align: left;
+  width: auto;
+  font-size: 1.25em;
+  letter-spacing: 0.20em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.topnav a:first-child {
+  /* float: left; */
+  text-align: center;
+}
+
+.links {
+  width: 100%;
+  float: right;
+}
+
+
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  color: #999999;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* animated text stuff */
+.typed-cursor{
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+/* homepage stuff */
+
+
+
+.mainImage img {
+  position: relative;
+  width: 40%;
+  height: auto;
+  float: left;
+  -ms-transform: rotate(-5deg); /* IE 9 */
+  -webkit-transform: rotate(-5deg); /* Chrome, Safari, Opera */
+  transform: rotate(-5deg);
+  animation: MoveUpDown 10s linear infinite;
+}
+
+@-webkit-keyframes MoveUpDown {
+  0% {
+    bottom: 0;
+  }
+  50% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: 0;
+  }
+}
+
+#side {
+  margin-left: 3%;
+  margin-top: -5%;
+  width: 50%;
+  font-size: 1.5em;
+  float: right;
+}
+
+.outer {
+  display: table;
+  position: absolute;
+  height: 80%;
+  width: 80%;
+}
+
+.middle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.inner {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+/* proj section stuff */
+
+
+.proj, .proj-lst {
+  text-align: center;
+  height: 300px;
+  display: inline-block;
+  width: 25%;
+  margin-right: 2em;
+}
+
+.proj-img {
+  background-color: #e0e0e1;
+  height: 80%;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+.proj-label {
+  text-transform: uppercase;
+  margin-left: auto;
+  margin-right: auto;
+  background-color:#6b7074;
+  letter-spacing: 0.1em;
+  color: #fff;
+  width: 10em;
+  padding: 0.5em;
+  position: relative;
+  margin-top: -0.90em;
+  display: block;
+}
+
+.proj-lst {
+  margin-right: 0;
+}
+
+/* popup module stuff */
+
+.modalDialog {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.8);
+  z-index: 99999;
+  opacity:0;
+  -webkit-transition: opacity 400ms ease-in;
+  -moz-transition: opacity 400ms ease-in;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+
+.modalDialog:target {
+  opacity:1;
+  pointer-events: auto;
+}
+
+.modalDialog > div {
+  display: block;
+  margin-top: 2%;
+  width: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1em;
+  background: #fff;
+  overflow:auto;
+  font-weight: normal;
+  text-transform: none;
+
+}
+
+
+div > .descript {
+  text-align: left;
+  width: 100%;
+  float: right;
+  font-size: 0.75em;
+}
+
+#proj-close {
+  width: 100%;
+  margin-right: 0em;
+}
+.close {
+  top: 1em;
+  right: 2.5%;
+  color: #000;
+  line-height: 15px;
+  position: absolute;
+  width: 24px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#proj-content {
+  margin-top: 1em;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+span.tag {
+  background-color: #4c4c4c;
+  padding: 1%;
+  color: #e5e5e5;
+  font-size: 0.65em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.1em;
+  display: inline-block;
+}
+
+#tags {
+  text-align: left;
+}
+
+a.proj-link, a.proj-link:visited, a.proj-link:active, a.proj-link:hover {
+  margin-right: 0em;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #000;
+  text-decoration: none;
+}
+
+#design {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* individual design project section */
+.indvProj-side {
+  float: left;
+  width: 10%;
+}
+
+.projects {
+  padding-bottom: 2em;
+}
+
+/* contact section */
+
+#wrapper {
+  position: relative;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+  display:table;
+  text-align: center;
+}
+
+#hmu, #msg {
+  display:table-cell;
+  vertical-align:middle;
+  height: 100%;
+}
+
+#hmu {
+  font-size: 3em;
+  display: inline-block;
+}
+
+#msg {
+  text-align: left;
+  font-size: 2em;
+  display: inline-block;
+}
+
+.social-media-icons {
+  text-align: center;
+  display: inline-block;
+  margin-bottom: 2%;
+  width: 100%;
+  height: auto;
+}
+
+.icon {
+  float: left;
+  width: 10%;
+  margin-right: 5%;
+  height: auto;
+}
+
+.first-icon {
+  margin-left: 20%;
+}
+
+
+.last-icon {
+  margin-right: 0%;
+}
+
+
+
+.email {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 100%;
+  margin-left: 0%;
+  background-color: #f4f5f6;
+  height: auto;
+  text-align: center;
+}
+
+.emailForm {
+  width: 100%;
+}
+
+input, textarea {
+  padding: 0.5em;
+  width: 100%;
+  line-height: 2em;
+}
+
+input[type=text], input[type=email], textarea, #submit {
+  border:1px solid #ccc;
+  background-color: #e0e0e1;
+  color: #6b7074;
+}
+
+textarea {
+  resize: none;
+}
+
+#submit {
+  width: 100%;
+  text-align:center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hidden {display: block;}
+
+.navbar-toggle .icon-bar {
+  background-color: black;
+}
