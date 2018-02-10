@@ -341,6 +341,14 @@ body {
     font-size: 6em;
 }
 
+#slogan {
+    color: #91accb;
+    margin-left: 24em;
+    margin-top: -2.75em;
+    font-family: 'Lobster', cursive;
+    position: absolute;
+    z-index: 1;
+}
 #content {
     color: #324955;
     position: absolute;
