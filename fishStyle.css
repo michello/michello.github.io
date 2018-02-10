@@ -1,0 +1,82 @@
+#school {
+	margin-top: -16em;
+	position: absolute;
+}
+
+.fish {
+    transform: scale(0.5);
+    z-index: 21;
+
+}
+
+.fish > .eye {
+    position: absolute;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: grey;
+    border-radius: 50%;
+    margin-left: 1em;
+    margin-top: 0.75em;
+    z-index: 2;
+}
+
+
+
+.fish > .body {
+    position: absolute;
+    height: 2.5em;
+    width: 4em;
+    background-color: #d46678;
+    border-radius: 50%;
+    margin-left: 0em;
+}
+
+.fish > .fins > .fin {
+    position: absolute;
+    height: 1.4em;
+    margin-left: 3em;
+    width: 3em;
+    border-radius: 50%;
+    background-color: #d46678;
+    transform: rotate(-16deg);
+}
+
+.fins {
+    position: absolute;
+    margin-top: 0em;
+}
+
+.lower {
+  transform: rotate(16deg)!important;
+  margin-top: 1em;
+}
+
+#greenFish .body, #greenFish .fin, #greenFish .lower {
+	  background-color:#66b266;
+}
+
+div#redFish {
+  animation: rightToLeft 11s linear infinite;
+}
+div#greenFish {
+  margin-top: 3em;
+  animation: rightToLeft 8s linear infinite;
+}
+
+div#orangeFish {
+  margin-top: 6em;
+  animation: rightToLeft 10s linear infinite;
+}
+
+#orangeFish .body, #orangeFish .fin, #orangeFish .lower {
+	  background-color:#ffc04c;
+}
+
+@keyframes rightToLeft {
+    0% {
+      margin-left: 100em;
+    }
+    100% {
+      margin-left: -100em;
+    }
+}
