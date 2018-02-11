@@ -1,25 +1,32 @@
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
   body {
     width: 100%;
     height: auto;
-    overflow-y: hidden;
+    overflow-y: scroll;
     background-color: #d2e4ec;
   }
 
   #sea {
     margin-top: 25vh;
-    height: 135vh;
+    height: 125vh;
     width: 100%;
 }
 
+li {
+    width: 100%;
+    }
+
   .content {
-    margin-left:0em;
-    margin-top: 19em;
-    width: 26em;
-  }
+    position: fixed;
+    margin-left: -5%;
+    margin-top: 18%;
+    width: 23%;
+}
 
   .content.left {
-    margin-top: 36em;
-    margin-left: 0em;
-  }
+    margin-left: -5%;
+    margin-top: 36%;
+    width: 23%;
+    position: fixed;
+}
 }
