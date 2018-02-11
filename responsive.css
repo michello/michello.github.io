@@ -2,7 +2,7 @@
   body {
     width: 100%;
     height: auto;
-    overflow-y: auto;
+    overflow-y: hidden;
     background-color: #d2e4ec;
   }
 
