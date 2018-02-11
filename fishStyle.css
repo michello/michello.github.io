@@ -1,5 +1,5 @@
 #school {
-	margin-top: -16em;
+	margin-top:10em;
 	position: absolute;
 }
 
@@ -17,7 +17,7 @@
     border-radius: 50%;
     margin-left: 1em;
     margin-top: 0.75em;
-    z-index: 2;
+    z-index: 23;
 }
 
 .fish > .body {
@@ -27,6 +27,7 @@
     background-color: #d46678;
     border-radius: 50%;
     margin-left: 0em;
+        z-index: 24;
 }
 
 .fish > .fins > .fin {
@@ -56,7 +57,10 @@ div#greenFish {
   margin-top: 3em;
   animation: rightToLeft 8s linear infinite;
 }
-
+div#fish {
+  margin-top:2em;
+  animation: none;
+}
 div#orangeFish {
   margin-top: 6em;
   animation: rightToLeft 10s linear infinite;

@@ -2,6 +2,16 @@
 	margin: 0;
   font-family: 'Roboto', sans-serif;
 }
+
+#container {
+    width: 100%;
+}
+
+#content {
+    width:50%;
+    margin: 0 auto;
+}
+
 body {
 	width: 100%;
 	overflow: hidden;
@@ -31,98 +41,7 @@ li {
 	margin-right: 2.25em;
 }
 
-#sea {
-	margin-top: 25vh;
-	height: 75vh;
-	width: 100%;
-	background-color: #7eb7d6;
-}
 
-.wave {
-	animation: movingWave 1s infinite alternate;
-}
-
-
-.shapeWave {
-
-    position: absolute;
-    background-color: #d2e4ec;
-    height: 5em;
-    width: 5em;
-    margin-top: -3em;
-    border-radius: 50%;
-}
-#waveZero {
-	margin-left: -5em;
-}
-#waveTwo {
-	margin-left: 5em;
-}
-
-#waveThree {
-	margin-left: 10em;
-}
-
-#waveFour {
-	margin-left: 15em;
-}
-
-#waveFive {
-	margin-left: 20em;
-}
-
-#waveSix {
-	margin-left: 25em;
-}
-
-#waveSeven {
-	margin-left: 30em;
-}
-
-#waveEight {
-	margin-left: 35em;
-}
-
-#waveNine {
-	margin-left: 40em;
-}
-
-#waveTen {
-	margin-left: 45em;
-}
-
-#waveEleven {
-	margin-left: 50em;
-}
-
-#waveTwelve {
-	margin-left: 55em;
-}
-
-#waveThirteen {
-	margin-left: 60em;
-}
-
-#waveFourteen {
-	margin-left: 65em;
-}
-
-#waveFifteen {
-	margin-left: 70em;
-}
-
-#waveSixteen {
-	margin-left: 75em;
-}
-
-@keyframes movingWave {
-	from {
-	    margin-left: 0em;
-	}
-	to {
-	    margin-left: 1em;
-	}
-}
 
 #pole {
     z-index: 1;
@@ -332,20 +251,36 @@ li {
     z-index: 1;
 }
 
+#wave7 {
+    margin-left: -16em;
+}
+
+#wave6 {
+    margin-left: -12em;
+}
+
+#wave5 {
+    margin-left: -8em;
+}
+
+#wave4 {
+    margin-left: -4em;
+}
+
 #wave0 {
-    margin-left: 9em;
+    margin-left: 0em;
 }
 
 #wave1 {
-    margin-left: 13em;
+    margin-left: 4em;
 }
 
 #wave2 {
-    margin-left: 17em;
+    margin-left: 8em;
 }
 
 #wave3 {
-    margin-left: 21em;
+    margin-left: 12em;
 }
 
 .bottomWave {
@@ -368,18 +303,18 @@ li {
     z-index: 1;
 }
 .content {
-    font-size: 0.65em;
+    font-size: 0.9em;
     color: #324955;
     position: absolute;
     z-index: 3;
-    margin-left: 36em;
+    margin-left: 10em;
     margin-top: 4em;
     width: 15em;
     text-align: justify;
 }
 
 .content.left {
-	margin-left: 53em;
+	margin-left: 27em;
 }
 
 #header {

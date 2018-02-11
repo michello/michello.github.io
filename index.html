@@ -10,108 +10,151 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="fishStyle.css">
+  <link rel="stylesheet" href="backgroundWave.css">
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <body>
-  <div id="header">
-  	<h1 id="title">michelle</h1>
-  	<h2 id="slogan">always fishin' for an adventure</h2>
-  </div>
-	<div class="content">
-    <p>
-      Hi there! My name is Michelle and I am a junior, studying computer science, at NYU.
-    </p>
-    <p>
-      I love <b>web dev</b>, having experience in front end but delving more into backend as I find knowing both helps me understand the flow of my applications better.
-    </p>
-    <p>
-      💻 Some apps I've built:
-    </p>
-    <p>
-      <ul>
-        <li>
-          <b><a href="https://github.com/ml4963/PriCoSha">PriCoSha</a></b>: Social networking app that allows users to share content with people they know and love with Python and Flask
-        </li>
-        <li>
-          <b><a href="https://github.com/ml4963/neotracker">NeoTracker</a></b>: An analytical web app that tracks number of posts made and allows admin users to send mass neomails.
-        </li>
-      </ul>
-    </p>
-
-
-
-
-
-
-
-  </div>
-
-  <div class ="content left">
-    <p>
-      🐧 I am currently:
-    </p>
-    <ul>
-      <li>
-        Working at <a href="https://www.nyu.edu/about/leadership-university-administration/university-senate/membership/councils/student-senators-council/campus-coding-collaborative.html">C3 as a software developer</a> creating an AskIT chatbot because <a href="https://www.nyu.edu/">NYU's website UX is annoying</a>.
-      </li>
-      <li>
-        Learning VueJS in my free time.
-      </li>
-      <li>
-        Creating a <b>Magikarp Jump clone</b> with Phaser with my little brother because he loves Magikarp Jump!
-      </li>
-    </ul>
-    <p>
-      🔧 Mich Links <i>(me, in german!)</i>
-      <p>
-        <a href="https://www.linkedin.com/in/ml4963" class="link">
-          <i class="fab fa-linkedin fa-4x" aria-hidden="true"></i>
-
-        </a>
-
-        <a href="https://github.com/ml4963" class="link">
-          <i class="fab fa-github fa-4x" aria-hidden="true"></i>
-
-        </a>
-
-        <a href="Michelle_Lam_Resume.pdf">
-          <i class="far fa-file-pdf fa-4x" aria-hidden="true"></i>
-
-        </a>
-      </p>
-    </p>
-
-  </div>
-
-	<div id="ship">
-		<div id="penguin">
-			<div class="body">
-				<div class="eyes" id="left"></div>
-				<div class="eyes" id="right"></div>
+	
+	<div id="header">
+  		<h1 id="title">michelle</h1>
+  		<h2 id="slogan">always fishin' for an adventure</h2>
+  	</div>
+  	<div id="container">
+	  	<div id="content">
+			<div class="content">
+			    <p>
+			      Hi there! My name is Michelle and I am a junior, studying computer science, at NYU.
+			    </p>
+			    <p>
+			      I love <b>web dev</b>, having experience in front end but delving more into backend as I find knowing both helps me understand the flow of my applications better.
+			    </p>
+			    <p>
+			      💻 Some apps I've built:
+			    </p>
+			    <p>
+			      <ul>
+			        <li>
+			          <b><a href="https://github.com/ml4963/PriCoSha">PriCoSha</a></b>: Social networking app that allows users to share content with people they know and love with Python and Flask
+			        </li>
+			        <li>
+			          <b><a href="https://github.com/ml4963/neotracker">NeoTracker</a></b>: An analytical web app that tracks number of posts made and allows admin users to send mass neomails.
+			        </li>
+			      </ul>
+			    </p>
 			</div>
-			<div id="beak"></div>
-			<div class="innerBody"></div>
-			<div class="hand"></div>
-			<div class="hand" id="rightHand"></div>
-		</div>
-		<div id="fishingPole">
-			<div class="string"></div>
-			<div class="string" id="secondString"></div>
-			<div class="string" id="thirdString"></div>
-			<div id="line"></div>
-		</div>
+		  	<div class ="content left">
+			    <p>
+			      🐧 I am currently:
+			    </p>
+			    <ul>
+			      <li>
+			        Working at <a href="https://www.nyu.edu/about/leadership-university-administration/university-senate/membership/councils/student-senators-council/campus-coding-collaborative.html">C3 as a software developer</a> creating an AskIT chatbot because <a href="https://www.nyu.edu/">NYU's website UX is annoying</a>.
+			      </li>
+			      <li>
+			        Learning VueJS in my free time.
+			      </li>
+			      <li>
+			        Creating a <b>Magikarp Jump clone</b> with Phaser with my little brother because he loves Magikarp Jump!
+			      </li>
+			    </ul>
+			    <p>
+			      🔧 Mich Links <i>(me, in german!)</i>
+			      <p>
+			        <a href="https://www.linkedin.com/in/ml4963" class="link">
+			          <i class="fab fa-linkedin fa-4x" aria-hidden="true"></i>
 
-		<div id="pole"></div>
-		<div id="mast"></div>
-		<div id="bottom"></div>
-	</div>
-	<div id="seaOverlap">
-		<div class = "wave">
-			<div class="concaveWave" id="wave0"></div>
-			<div class="concaveWave" id="wave1"></div>
-			<div class="concaveWave" id="wave2"></div>
-			<div class="concaveWave" id="wave3"></div>
+			        </a>
+
+			        <a href="https://github.com/ml4963" class="link">
+			          <i class="fab fa-github fa-4x" aria-hidden="true"></i>
+
+			        </a>
+
+			        <a href="Michelle_Lam_Resume.pdf">
+			          <i class="far fa-file-pdf fa-4x" aria-hidden="true"></i>
+
+			        </a>
+			      </p>
+			    </p>
+		  	</div>
+
+			<div id="ship">
+				<div id="penguin">
+					<div class="body">
+						<div class="eyes" id="left"></div>
+						<div class="eyes" id="right"></div>
+					</div>
+					<div id="beak"></div>
+					<div class="innerBody"></div>
+					<div class="hand"></div>
+					<div class="hand" id="rightHand"></div>
+				</div>
+				<div id="fishingPole">
+					<div class="string"></div>
+					<div class="string" id="secondString"></div>
+					<div class="string" id="thirdString"></div>
+					<div id="line"></div>
+				</div>
+
+				<div id="pole"></div>
+				<div id="mast"></div>
+				<div id="bottom"></div>
+			</div>
+			<div id="seaOverlap">
+				<div class = "wave">
+					<div class="concaveWave" id="wave7"></div>
+					<div class="concaveWave" id="wave6"></div>
+					<div class="concaveWave" id="wave5"></div>
+					<div class="concaveWave" id="wave4"></div>
+					<div class="concaveWave" id="wave0"></div>
+					<div class="concaveWave" id="wave1"></div>
+					<div class="concaveWave" id="wave2"></div>
+					<div class="concaveWave" id="wave3"></div>
+				</div>
+			</div>
+			<div id="school">
+		  		<div class="fish" id="fish">
+				  <div class="eye"></div>
+				  <div class="body"></div>
+				  <div class="fins">
+				    <div class="fin"></div>
+				    <div class="fin lower"></div>
+				  </div>
+				</div>
+				<div class="fish" id="redFish">
+				  <div class="eye"></div>
+				  <div class="body"></div>
+				  <div class="fins">
+				    <div class="fin"></div>
+				    <div class="fin lower"></div>
+				  </div>
+				</div>
+				<div class="fish" id="greenFish">
+				  <div class="eye"></div>
+				  <div class="body"></div>
+				  <div class="fins">
+				    <div class="fin"></div>
+				    <div class="fin lower"></div>
+				  </div>
+				</div>
+				<div class="fish" id="orangeFish">
+				  <div class="eye"></div>
+				  <div class="body"></div>
+				  <div class="fins">
+				    <div class="fin"></div>
+				    <div class="fin lower"></div>
+				  </div>
+				</div>
+				<div class="fish" id="purpleFish">
+				  <div class="eye"></div>
+				  <div class="body"></div>
+				  <div class="fins">
+				    <div class="fin"></div>
+				    <div class="fin lower"></div>
+				  </div>
+				</div>
+			</div>
 		</div>
 	</div>
 	<div id="sea">
@@ -133,42 +176,14 @@
 			<div class="shapeWave" id="waveFourteen"></div>
 			<div class="shapeWave" id="waveFifteen"></div>
 			<div class="shapeWave" id="waveSixteen"></div>
+			<div class="shapeWave" id="waveSeventeen"></div>
+			<div class="shapeWave" id="waveEighteen"></div>
+			<div class="shapeWave" id="waveNinteen"></div>
+			<div class="shapeWave" id="waveTwenty"></div>
 		</div>
 	</div>
-  <div id="school">
-    <div class="fish" id="redFish">
-      <div class="eye"></div>
-      <div class="body"></div>
-      <div class="fins">
-        <div class="fin"></div>
-        <div class="fin lower"></div>
-      </div>
-    </div>
-    <div class="fish" id="greenFish">
-      <div class="eye"></div>
-      <div class="body"></div>
-      <div class="fins">
-        <div class="fin"></div>
-        <div class="fin lower"></div>
-      </div>
-    </div>
-    <div class="fish" id="orangeFish">
-      <div class="eye"></div>
-      <div class="body"></div>
-      <div class="fins">
-        <div class="fin"></div>
-        <div class="fin lower"></div>
-      </div>
-    </div>
-    <div class="fish" id="purpleFish">
-      <div class="eye"></div>
-      <div class="body"></div>
-      <div class="fins">
-        <div class="fin"></div>
-        <div class="fin lower"></div>
-      </div>
-    </div>
-  </div>
+	
+  	
 
 
 </body>

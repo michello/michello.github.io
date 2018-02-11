@@ -1,22 +1,25 @@
 @media only screen and (max-width: 768px) {
   body {
     width: 100%;
+    height: auto;
     overflow-y: auto;
     background-color: #d2e4ec;
   }
 
   #sea {
-  	margin-top: 25vh;
-  	height: 100vh;
-  }
+    margin-top: 25vh;
+    height: 135vh;
+    width: 100%;
+}
 
   .content {
-    margin-left: 13em;
-    margin-top: 27em;
+    margin-left:0em;
+    margin-top: 19em;
     width: 26em;
   }
 
-  .content .left {
-    margin-left: 13em;
+  .content.left {
+    margin-top: 36em;
+    margin-left: 0em;
   }
 }
