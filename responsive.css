@@ -1,4 +1,8 @@
 @media only screen and (max-width: 690px) {
+  html, body {
+    overflow-y:hidden;
+    height:100%;
+  }
   body {
     width: 100%;
     height: auto;
