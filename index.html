@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="responsive.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="icon" type="image/png" href="https://i.gyazo.com/f0f64f9904694fc8e473addec0b06dcf.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 <body>
 
@@ -21,19 +22,28 @@
   		<h1 id="title">michelle</h1>
   		<h2 id="slogan">always fishin' for an adventure</h2>
   	</div>
+  	<div id="links">
+  		<a href="#about" class="nav">about</a>
+  		<a href="#projs" class="nav">projects</a>
+  		<a href="#curr" class="nav">currently</a>
+  		<a href="#myLinks" class="nav">links</a>
+  	</div>
+
   	<div id="container">
-	  	<div id="content">
-			<div class="content">
-			    <p>
+  		
+	  	<div id = "content">
+	  		<div id="about" class ="info">
+		  		<h3>about me</h3>
+		  		<p>
 			      Hi there! My name is Michelle and I am a junior, studying computer science, at NYU.
 			    </p>
 			    <p>
 			      I love <b>web dev</b>, having experience in front end but delving more into backend as I find knowing both helps me understand the flow of my applications better.
 			    </p>
-			    <p>
-			      💻 Some apps I've built:
-			    </p>
-			    <p>
+			</div>
+			<div id="projs" class ="info hidden">
+		  		<h3>some apps i've built</h3>
+		  		<p>
 			      <ul>
 			        <li>
 			          <b><a href="https://github.com/ml4963/PriCoSha">PriCoSha</a></b>: Social networking app that allows users to share content with people they know and love with Python and Flask
@@ -44,8 +54,9 @@
 			      </ul>
 			    </p>
 			</div>
-		  	<div class ="content left">
-			    <p>
+			<div id="curr" class ="info hidden">
+		  		<h3>currently</h3>
+		  		<p>
 			      🐧 I am currently:
 			    </p>
 			    <ul>
@@ -59,28 +70,25 @@
 			        Creating a <b>Magikarp Jump clone</b> with Phaser with my little brother because he loves Magikarp Jump!
 			      </li>
 			    </ul>
-			    <p>
-			      🔧 Mich Links <i>(me, in german!)</i>
+			</div>
+			<div id="myLinks" class ="info hidden">
+		  		<h3>🔧 Mich Links <i>(me, in german!)</i></h3>
 			      <p>
 			        <a href="https://www.linkedin.com/in/ml4963" class="link">
 			          <i class="fab fa-linkedin fa-4x" aria-hidden="true"></i>
-
 			        </a>
-
 			        <a href="https://github.com/ml4963" class="link">
 			          <i class="fab fa-github fa-4x" aria-hidden="true"></i>
-
 			        </a>
-
 			        <a href="Michelle_Lam_Resume.pdf">
 			          <i class="far fa-file-pdf fa-4x" aria-hidden="true"></i>
-
 			        </a>
-			      </p>
-			    </p>
-		  	</div>
+			     </p>
+			</div>
+	  	</div>
+	</div>
 
-			<div id="ship">
+	<div id="ship">
 				<div id="penguin">
 					<div class="body">
 						<div class="eyes" id="left"></div>
@@ -101,84 +109,26 @@
 				<div id="pole"></div>
 				<div id="mast"></div>
 				<div id="bottom"></div>
-			</div>
-			<div id="seaOverlap">
-				<div class = "wave">
-					<div class="concaveWave" id="wave7"></div>
-					<div class="concaveWave" id="wave6"></div>
-					<div class="concaveWave" id="wave5"></div>
-					<div class="concaveWave" id="wave4"></div>
-					<div class="concaveWave" id="wave0"></div>
-					<div class="concaveWave" id="wave1"></div>
-					<div class="concaveWave" id="wave2"></div>
-					<div class="concaveWave" id="wave3"></div>
-				</div>
-			</div>
-			<div id="school">
-				<div class="fish" id="redFish">
-				  <div class="eye"></div>
-				  <div class="body"></div>
-				  <div class="fins">
-				    <div class="fin"></div>
-				    <div class="fin lower"></div>
-				  </div>
-				</div>
-				<div class="fish" id="greenFish">
-				  <div class="eye"></div>
-				  <div class="body"></div>
-				  <div class="fins">
-				    <div class="fin"></div>
-				    <div class="fin lower"></div>
-				  </div>
-				</div>
-				<div class="fish" id="orangeFish">
-				  <div class="eye"></div>
-				  <div class="body"></div>
-				  <div class="fins">
-				    <div class="fin"></div>
-				    <div class="fin lower"></div>
-				  </div>
-				</div>
-				<div class="fish" id="purpleFish">
-				  <div class="eye"></div>
-				  <div class="body"></div>
-				  <div class="fins">
-				    <div class="fin"></div>
-				    <div class="fin lower"></div>
-				  </div>
-				</div>
-			</div>
-		</div>
 	</div>
+
+	<div id="seaOverlap">
+	</div>
+
+
 	<div id="sea">
 		<div class = "wave">
-			<div class="shapeWave" id="waveZero"></div>
-			<div class="shapeWave" id="waveOne"></div>
-			<div class="shapeWave" id="waveTwo"></div>
-			<div class="shapeWave" id="waveThree"></div>
-			<div class="shapeWave" id="waveFour"></div>
-			<div class="shapeWave" id="waveFive"></div>
-			<div class="shapeWave" id="waveSix"></div>
-			<div class="shapeWave" id="waveSeven"></div>
-			<div class="shapeWave" id="waveEight"></div>
-			<div class="shapeWave" id="waveNine"></div>
-			<div class="shapeWave" id="waveTen"></div>
-			<div class="shapeWave" id="waveEleven"></div>
-			<div class="shapeWave" id="waveTwelve"></div>
-			<div class="shapeWave" id="waveThirteen"></div>
-			<div class="shapeWave" id="waveFourteen"></div>
-			<div class="shapeWave" id="waveFifteen"></div>
-			<div class="shapeWave" id="waveSixteen"></div>
-			<div class="shapeWave" id="waveSeventeen"></div>
-			<div class="shapeWave" id="waveEighteen"></div>
-			<div class="shapeWave" id="waveNinteen"></div>
-			<div class="shapeWave" id="waveTwenty"></div>
+			<div class="shapeWave"></div>
 		</div>
 	</div>
-
-
-
-
 </body>
+<script src="sea.js"></script>
+<script>
+	$('.nav').click(function(e){
+		e.preventDefault();
+	    var selected = $(this)["0"].hash;
+	    $('#content').find('.info').addClass('hidden');
+	    $(selected).removeClass('hidden');
+  	});
+</script>
 
 </html>

@@ -4,18 +4,21 @@
 }
 
 #container {
+    margin-top: 5em;
     width: 100%;
+    position:absolute;
+    z-index: 3;
 }
 
 #content {
-    width:50%;
-    margin: 0 auto;
+    width: 30%;
+    margin-left: 75vh;
+    text-align: justify;
 }
 
 body {
 	width: 100%;
-	overflow-x: hidden;
-    overflow-y: scroll;
+	overflow: hidden;
 	background-color: #d2e4ec;
 }
 
@@ -218,11 +221,12 @@ li {
 }
 
 #ship {
-    margin-top: -8em;
-    position: absolute;
+    position: relative;
     animation: MoveUpDown 2s linear infinite;
-    transform: rotate(10deg);
     z-index: 1;
+    transform: rotate(10deg) scale(1.2);
+    top: -8em;
+
 }
 
 @keyframes MoveUpDown {
@@ -238,51 +242,10 @@ li {
 }
 
 #seaOverlap {
-    margin-top: -5em;
+    margin-top: 16em;
     position: absolute;
 }
 
-.concaveWave {
-    position: absolute;
-    background-color: #7eb7d6;
-    height: 5em;
-    width: 5em;
-    margin-top: 20em;
-    border-radius: 50%;
-    z-index: 1;
-}
-
-#wave7 {
-    margin-left: -16em;
-}
-
-#wave6 {
-    margin-left: -12em;
-}
-
-#wave5 {
-    margin-left: -8em;
-}
-
-#wave4 {
-    margin-left: -4em;
-}
-
-#wave0 {
-    margin-left: 0em;
-}
-
-#wave1 {
-    margin-left: 4em;
-}
-
-#wave2 {
-    margin-left: 8em;
-}
-
-#wave3 {
-    margin-left: 12em;
-}
 
 .bottomWave {
     background-color: #7eb7d6;
@@ -318,11 +281,34 @@ li {
 	margin-left: 27em;
 }
 
-#header {
+#header, #links {
     z-index: 1;
     width: 100vw;
     height: auto;
     margin-top: -8em;
     text-align: center;
     position: absolute;
+}
+
+#links {
+    z-index: 3;
+    margin-top:-1em;
+}
+
+#links a {
+    background-color: #245998;
+    padding: 0.5em;
+    font-size: 12px;
+    color: #91accb;
+    display: inline-block;
+    width: 55px;
+}
+
+#links a:hover {
+    background-color: #91accb;
+    color: #245998;
+}
+
+.hidden {
+    display:none;
 }
