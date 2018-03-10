@@ -1,12 +1,11 @@
 @media only screen and (max-width: 690px) {
-  html, body {
-    overflow-x:hidden;
-  }
+  
+
   body {
-    width: 100%;
-    height: auto;
     overflow-x: hidden;
     overflow-y: scroll;
+    width: 100%;
+    height: auto;
     background-color: #d2e4ec;
   }
 
@@ -14,6 +13,10 @@
     margin-top: 25vh;
     height: 125vh;
     width: 100%;
+  }
+
+  #ship {
+    margin-left: calc(100% - 27em);
   }
 
   li {
