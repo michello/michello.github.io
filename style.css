@@ -105,7 +105,7 @@ li {
 #bottom {
     top: 16em;
     left: 11em;
-    z-index: 10;
+    z-index: 2;
     position: absolute;
     width: 15em;
     height: 7.5em;
@@ -242,7 +242,7 @@ li {
 }
 
 #seaOverlap {
-    margin-top: 16em;
+    margin-top: 23em;
     position: absolute;
 }
 

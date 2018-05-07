@@ -1,9 +1,11 @@
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 690px) {
+  
+
   body {
-    width: 100%;
-    height: auto;
     overflow-x: hidden;
     overflow-y: scroll;
+    width: 100%;
+    height: auto;
     background-color: #d2e4ec;
   }
 
@@ -11,23 +13,34 @@
     margin-top: 25vh;
     height: 125vh;
     width: 100%;
-}
+  }
 
-li {
+  #ship {
+    margin-left: calc(100% - 27em);
+  }
+
+  li {
     width: 100%;
-    }
+  }
 
   .content {
     position: fixed;
     margin-left: -5%;
     margin-top: 18%;
     width: 23%;
-}
+  }
 
   .content.left {
     margin-left: -5%;
     margin-top: 36%;
     width: 23%;
     position: fixed;
-}
+  }
+
+  #content {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 13em;
+    text-align: justify;
+  }
 }
