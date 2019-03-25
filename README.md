@@ -3,6 +3,7 @@
 ## inspo/references
 - https://dribbble.com/shots/4041132-12-Days-of-GIFmas-Day-10
 - https://dribbble.com/shots/3976660-Penguin
+- ```CSS <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">```
 
 # screenshot of previous layouts
 
