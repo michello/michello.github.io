@@ -1,0 +1,130 @@
+
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>mich</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Lobster|Roboto" rel="stylesheet">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="fishStyle.css">
+  <link rel="stylesheet" href="backgroundWave.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="icon" type="image/png" href="https://i.gyazo.com/f0f64f9904694fc8e473addec0b06dcf.png" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<body>
+
+	<div id="header">
+  		<h1 id="title">michelle</h1>
+  		<h2 id="slogan">always fishin' for an adventure</h2>
+  	</div>
+  	<div id="links">
+  		<a href="#about" class="nav">about</a>
+  		<a href="#projs" class="nav">projects</a>
+  		<a href="#prev" class="nav">previously</a>
+  		<a href="#myLinks" class="nav">links</a>
+  	</div>
+
+  	<div id="container">
+  		
+	  	<div id = "content">
+	  		<div id="about" class ="info">
+		  		<h3>about me</h3>
+		  		<p>
+			      Hi there! My name is Michelle and I am a senior, studying computer science, at NYU.
+			    </p>
+			    <p>
+				    I love creating new <b>web experiences</b> that aid in bettering existing processes and problems. Some recent web applications I've worked on is a <a href="https://github.com/ml4963/job-tracker">kanban card styled job tracker</a> and <a href="https://github.com/AbirHassan/DAM">a map maker</a>.
+			    </p>
+				<p>
+					In my spare time, I like <a href="https://github.com/ml4963/neopets-layouts">creating layouts</a> for my anime/manga themed guild in Neopets!
+				</p>
+			</div>
+			<div id="projs" class ="info hidden">
+		  		<h3>some apps i've built</h3>
+		  		<p>
+			      <ul>
+			        <li>
+			          <b><a href="https://github.com/ml4963/PriCoSha">PriCoSha</a></b>: Social networking app that allows users to share content with people they know and love with Python and Flask
+			        </li>
+			        <li>
+			          <b><a href="https://github.com/ml4963/neotracker">NeoTracker</a></b>: An analytical web app that tracks number of posts made and allows admin users to send mass neomails.
+			        </li>
+			      </ul>
+			    </p>
+			</div>
+			<div id="prev" class ="info hidden">
+		  		<h3>previously</h3>
+			    <ul>
+			      <li>
+				      Interned at <a href="https://www.blueapron.com/">Blue Apron</a> as a software engineer, working on their internal tools that help track changes with Ruby on Rails and EmberJS!
+			      </li>   
+			      <li>
+			        Worked for NYU as a software developer and creating an AskIT chatbot because <a href="https://www.nyu.edu/">NYU's website UX is annoying</a>.
+			      </li>
+			    </ul>
+			</div>
+			<div id="myLinks" class ="info hidden">
+		  		<h3>🔧 Mich Links <i>(me, in german!)</i></h3>
+			      <p>
+			        <a href="https://www.linkedin.com/in/ml4963" class="link">
+			          <i class="fab fa-linkedin fa-4x" aria-hidden="true"></i>
+			        </a>
+			        <a href="https://github.com/ml4963" class="link">
+			          <i class="fab fa-github fa-4x" aria-hidden="true"></i>
+			        </a>
+			        <a href="Michelle_Lam_Resume.pdf">
+			          <i class="far fa-file-pdf fa-4x" aria-hidden="true"></i>
+			        </a>
+			     </p>
+			</div>
+	  	</div>
+	</div>
+
+	<div id="ship">
+		<div id="penguin">
+			<div class="body">
+				<div class="eyes" id="left"></div>
+				<div class="eyes" id="right"></div>
+			</div>
+			<div id="beak"></div>
+			<div class="innerBody"></div>
+			<div class="hand"></div>
+			<div class="hand" id="rightHand"></div>
+		</div>
+		<div id="fishingPole">
+			<div class="string"></div>
+			<div class="string" id="secondString"></div>
+			<div class="string" id="thirdString"></div>
+			<div id="line"></div>
+		</div>
+
+		<div id="pole"></div>
+		<div id="mast"></div>
+		<div id="bottom"></div>
+		<div id="seaOverlap"></div>
+	</div>
+
+
+	<div id="sea">
+		<div class = "wave">
+			<div class="shapeWave"></div>
+		</div>
+	</div>
+</body>
+<script src="sea.js"></script>
+<script>
+	$('.nav').click(function(e){
+		e.preventDefault();
+	    var selected = $(this)["0"].hash;
+	    $('#content').find('.info').addClass('hidden');
+	    $(selected).removeClass('hidden');
+  	});
+</script>
+
+</html>
