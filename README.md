@@ -5,3 +5,6 @@
 
 ## ver 2
 <img src="https://i.gyazo.com/c31b2b4767b52c028a979b82d23945bc.png" width="200px" height="200px"><img src="https://i.gyazo.com/bbf4f3a8d65834c71e11fb1368bfb2ba.png" width="200px" height="200px"><img src="https://i.gyazo.com/d285a56e83a091753eba6cf416b2781f.png" width="200px" height="200px"><img src="https://i.gyazo.com/357c3e1507653b9189438d6296bedff4.png" width="200px" height="200px">
+
+## vers 3 
+<img src="https://i.gyazo.com/d259687cbddbe54a8936c078999ac353.png" width="200px" height="200px"><img src="https://i.gyazo.com/b455ee684448d90d6b81146deb23e381.png" width="200px" height="200px">
