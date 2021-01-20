@@ -1,1 +1,133 @@
-*{background-color:#f3f2f1;font-family:Nunito,sans-serif}.fas,.fab,.far{vertical-align: middle;}h1{color:#7a4c88}a{color:#410055;text-decoration:none;font-weight:700}body{width:80%;margin:0 auto}#coffee-penguin,#flying-penguin{margin-top:2em;width:40%;transform:rotate(-10deg);animation:MoveUpDown 3s linear infinite;position:relative;display:inline-block}#coffee-penguin{transform:none;animation:none;float:right}.message{height:auto;width:48%;top:1em;margin-left:10%;display:inline-block;text-align:justify}.left{margin-left:0;margin-top:4em}@keyframes MoveUpDown{0%,100%{bottom:0}50%{bottom:1em}}@media only screen and (max-width:850px){#coffee-penguin,#flying-penguin{float:none;margin-top:2em;width:50%;margin-left:25%;animation:none;position:relative}.message{position:relative;width:100%;top:0!important;margin-left:0}.left{margin-top:0}}
+@font-face {
+    font-family: 'alpha-clouds';
+    src: url('./AlphaClouds.ttf');
+}
+* {
+    background-color: #f3f2f1;
+    font-family: Nunito, sans-serif
+}
+
+.fas,
+.fab,
+.far {
+    vertical-align: middle;
+}
+
+.title {
+    font-family: 'alpha-clouds', sans-serif;
+    font-size: 68px;
+    padding: 5rem 0;
+    float: right;
+    position: absolute;
+    background: transparent;
+    color: #7a4c88;
+}
+
+h1 {
+    color: #7a4c88
+}
+
+a {
+    background: #d7c9db;
+    color: #410055;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0 5px;
+    border-radius: 2px;
+}
+
+a:hover {
+    background: #410055;
+    color: #d7c9db;
+}
+
+#deets a {
+    background: none;
+}
+
+#deets a:hover {
+    background: none;
+    color: #410055;
+}
+
+body {
+    max-width: 550px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.body {
+    margin-top: -50px;
+}
+
+.top {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.message {
+    text-align: justify
+}
+
+#flying-penguin {
+    margin-top: 2em;
+    width: 200px;
+    margin-left: 375px;
+    background: none;
+    animation: MoveUpDown 3s linear infinite;
+    position: relative;
+    display: inline-block;
+}
+
+@keyframes MoveUpDown {
+    0%,
+    100% {
+        bottom: 0
+    }
+    50% {
+        bottom: 1em
+    }
+}
+
+@media only screen and (max-width:550px) {
+    .body {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 0px;
+    }
+
+    .message {
+        position: relative;
+        width: 100%;
+        top: 0 !important;
+        margin-left: 0
+    }
+    .title {
+        text-align: center;
+        font-size: 40px;
+        padding: 0;
+        float: none;
+        position: relative;
+
+    }
+
+    #flying-penguin {
+        margin: 0 auto;
+        margin-top: 0px;
+        display: block;
+    }
+
+    body {
+        width: 100%;
+    }
+
+    .top {
+        width: 90%;
+        margin: 0 auto;
+        margin-top: 5%;
+    }
+
+    ul {
+        padding-left: 5%;
+    }
+}
