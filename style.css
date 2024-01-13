@@ -7,15 +7,26 @@
     font-family: Nunito, sans-serif
 }
 
+body {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 80vh;
+    text-align: center;
+}
+
+.message {
+    height: auto;
+    text-align: justify;
+}
+
 .fas,
 .fab,
 .far {
     vertical-align: middle;
 }
 
-.title {
-    font-family: 'alpha-clouds', sans-serif;
-    font-size: 68px;
+.left {
     padding: 5rem 0;
     float: right;
     position: absolute;
@@ -23,17 +34,24 @@
     color: #7a4c88;
 }
 
+.title {
+    font-family: 'alpha-clouds', sans-serif;
+    font-size: xxx-large;
+}
+
 h1 {
     color: #7a4c88
 }
 
 a {
-    background: #d7c9db;
-    color: #410055;
-    text-decoration: none;
-    font-weight: 700;
-    padding: 0 5px;
-    border-radius: 2px;
+        background: #d7c9db;
+        color: #410055;
+        text-decoration: none;
+        font-weight: 700;
+        padding: 0 5px;
+        border-radius: 2px;
+    margin-right: 5px;
+
 }
 
 a:hover {
@@ -50,15 +68,6 @@ a:hover {
     color: #410055;
 }
 
-body {
-    max-width: 550px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.body {
-    margin-top: -50px;
-}
 
 .top {
     width: 100%;
@@ -89,9 +98,19 @@ body {
     }
 }
 
-@media only screen and (max-width:550px) {
+@media only screen and (max-width:600px) {
+    p {
+        font-size: medium;
+    }
+    body {
+        justify-content: center;
+    align-items: center;
+    display: flex;
+        height: 100vh;
+    }
     .body {
-        width: 90%;
+        height: auto;
+        width: 100%;
         margin-left: 5%;
         margin-top: 0px;
     }
@@ -102,7 +121,7 @@ body {
         top: 0 !important;
         margin-left: 0
     }
-    .title {
+    .left {
         text-align: center;
         font-size: 40px;
         padding: 0;
@@ -115,10 +134,6 @@ body {
         margin: 0 auto;
         margin-top: 0px;
         display: block;
-    }
-
-    body {
-        width: 100%;
     }
 
     .top {
